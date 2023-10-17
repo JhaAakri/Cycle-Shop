@@ -88,6 +88,9 @@ body {
 
 
 /* Footer */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 #footer-container {
     margin-top: 15%;

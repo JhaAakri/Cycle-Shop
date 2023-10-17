@@ -229,7 +229,7 @@ header .header-icons a {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 960px;
+    margin-left: 850px;
 }
 
 #sorting select {
@@ -320,13 +320,45 @@ header .header-icons a {
     margin-top: 10px;
 }
 
+#products {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.item {
+    width: calc(33.33% - 80px); 
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5); 
+}
 
+.item img {
+    width: 100%; 
+    height: auto; 
+    max-height: 100%; 
+    object-fit: cover;
+}
 
+.titlePrice {
+    text-align: center;
+    color: black; 
+    margin-top: 10px;
+}
 
+.titlePrice h3 {
+    margin-bottom: 5px;
+}
 
 
 /* Footer */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 #footer-container {
     margin-top: 15%;
@@ -611,6 +643,40 @@ header .header-icons a {
     #footer-container .footer-bottom {
         width: 90%;
         margin: auto;
+    }
+    #footer-container .about {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    #footer-container .footer_top {
+        display: flex;
+        flex-direction: column;
+    }
+    #footer-container .Social_media {
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    #footer-container .logo {
+        width: 100%;
+    }
+    #footer-container .logo img {
+        width: 50%;
+        margin: auto;
+    }
+    #footer-container .newsletter {
+        text-align: center;
+        margin: 5%;
+        display: flex;
+        width: 100%;
+    }
+    #footer-container .newsletter div {
+        align-self: center;
+    }
+    #footer-container .footer-bottom p {
+        font-size: larger;
     }
     #footer-container .about {
         display: none !important;
