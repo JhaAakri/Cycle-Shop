@@ -1,4 +1,4 @@
-* {
+/* * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -184,31 +184,144 @@ body {
 .pagination-button:hover {
     cursor: pointer;
     background-color: #b33535;
-}
-
-
-/* #low {
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    background-color: #1a1a1a;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    border-color: #c68709;
-}
-
-#high {
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    background-color: #1a1a1a;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    border-color: #c68709;
 } */
+
+
+/* Body styles */
+body {
+    background-color: #484448;
+    color: white;
+    margin: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #1c1c1c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+header .header-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Main styles */
+#main {
+    width: 90%;
+    margin: auto;
+}
+
+#sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 960px;
+}
+
+#sorting select {
+    background-color: #484448;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#maindiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+#filterdiv {
+    width: 20%;
+    font-size: 20px;
+    color: white;
+    padding: 20px 0;
+}
+
+/*  FILTERS header style */
+.filter-header {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.filter-header i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+/* Filter option styles */
+.filter-option {
+    margin-bottom: 20px;
+}
+
+.filter-option label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-option select {
+    background-color: #484448;
+    color: white;
+    border: 1px solid #747474;
+    padding: 5px;
+    width: 100%;
+    font-size: 14px;
+}
+
+
+#products {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Product card styles */
+.product-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 7px 30px 4px #422f0b, 0px 2px 16px 0px #422f0b;
+    width: calc(33.33% - 20px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
 
 
 

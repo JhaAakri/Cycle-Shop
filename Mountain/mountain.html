@@ -17,88 +17,85 @@
     
 
 
-    <!-- main body -->
-    <div id="main">
+     <!-- Main Content -->
+     <div id="main">
         <div id="sorting">
             <h4>SORT BY PRICE:</h4>
-
-            <button id="low">Low To High</button>
-            <button id="high">High To Low</button>
-
-
-
+            <select id="sort">
+                <option value="low">Low To High</option>
+                <option value="high">High To Low</option>
+            </select>
         </div>
         <div id="maindiv">
             <div id="filterdiv">
                 <h1>Mountain</h1>
-
-
-                <div>
-                <select id="category">
-                    <option value="">CATEGORY</option>
-                    <option value="Mountain">Mountain</option>
-                    <option value="Road">Road</option>
-                    <option value="Active">Active</option>
-                    <option value="Electric">Electric</option>
-                    <option value="Kid">Kid</option>
-                </select>
-            </div>
-
-                <div>
-
+                <!--FILTERS header  -->
+                <div class="filter-header">
+                    <i class="fas fa-filter"></i>
+                    <h3>Filters</h3>
+                </div>
+                <!-- Category filter -->
+                <div class="filter-option">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="">All</option>
+                        <option value="Mountain">Mountain</option>
+                        <option value="Road">Road</option>
+                        <option value="Active">Active</option>
+                        <option value="Electric">Electric</option>
+                        <option value="Kid">Kid</option>
+                    </select>
+                </div>
+                <!-- Material filter -->
+                <div class="filter-option">
+                    <label for="material">Material:</label>
                     <select id="material">
-                    <option value="">MATERIAL</option>
-                    <option value="aluminum">Aluminum</option>
-                    <option value="alloy">Steel</option>
-                    <option value="aluminum">Titanium</option>
-                    <option value="alloy">Carbon fiber</option>
-                    
-                </select>
+                        <option value="">All</option>
+                        <option value="aluminum">Aluminum Alloy</option>
+                        <option value="steel">Steel</option>
+                        <option value="steel">Carbon fiber</option>
+                        <option value="steel">Titanium</option>
+                    </select>
                 </div>
-
-
-                <div>
-
+                <!-- Color filter -->
+                <div class="filter-option">
+                    <label for="color">Color:</label>
                     <select id="color">
-                    <option value="">COLOUR</option>
-                    <option value="black">⚫</option>
-                    <option value="Red">🔴</option>
-                    <option value="Green">🟢</option>
-                </select>
+                        <option value="">All</option>
+                        <option value="black">Black</option>
+                        <option value="red">Red</option>
+                        <option value="black">Orange</option>
+                        <option value="red">Blue</option>
+                        <option value="black">Green</option>
+                        <option value="red">Purple</option>
+                    </select>
                 </div>
-
-
-
-                <div>
-
+                <!-- Brake Type filter -->
+                <div class="filter-option">
+                    <label for="break">Brake Type:</label>
                     <select id="break">
-                    <option value="">BRAKE TYPE</option>
-                    <option value="disc">Disc</option>
-                    <option value="none">Rim</option>
-                    <option value="none">Drum</option>
-                    
-                </select>
+                        <option value="">All</option>
+                        <option value="disc">Disc</option>
+                        <option value="rim">Rim</option>
+                        <option value="rim">Drum</option>
+
+                    </select>
                 </div>
-
-
-
-                
-                <div>
-
+                <!-- Suspension filter -->
+                <div class="filter-option">
+                    <label for="suspension">Suspension:</label>
                     <select id="suspension">
-                    <option value="">SUSPENSION</option>
-                    <option value="font">Font</option>
-                    <option value="font_rear">Font and Rear</option>
-                    
-                </select>
+                        <option value="">All</option>
+                        <option value="front">Front</option>
+                        <option value="front_rear">Front and Rear</option>
+                    </select>
                 </div>
-
-
-                <div>
-
-                    <select id="size">
-                    <option value="">WHEELSIZE</option>
-                    <option value="s2">S</option>
+                <!-- Wheel Size filter -->
+<div class="filter-option">
+    <label for="wheel">Wheel Size:</label>
+    <select id="wheel">
+        <option value="">All</option>
+        <option value="s2">S</option>
                     <option value="s2">S1</option>
                     <option value="s2">S2</option>
                     <option value="s3">S3</option>
@@ -107,45 +104,22 @@
                     <option value="s2">XL</option>
                     <option value="s2">XXL</option>
                     <option value="s2">XXS</option>
-                    
-                </select>
-                </div>
+    </select>
+</div>
 
-               
-
-                
-
-
-
-
-                <div>
-
-                    <select id="wheel">
-                    <option value="">WHEELSIZE</option>
-                    <option value="29/27.5">29/27.5</option>
-                    <option value="28/26.5">28/26.5</option>
-                    <option value="25/23.5">25/23.5</option>
-                    
-                </select>
-                </div>
-
-                <div>
-
-
-                    <select id="year">
-                    <option value="">MODEL YEAR</option>
-                    <option value="2023">2020</option>
-                    <option value="2023">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    
-                    
-                </select>
-                </div>
-
-
-
+<!-- Model Year filter -->
+<div class="filter-option">
+    <label for="year">Model Year:</label>
+    <select id="year">
+        <option value="">All</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+    </select>
+</div>
             </div>
+                
             <div id="products">
 
 
