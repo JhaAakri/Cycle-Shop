@@ -6,60 +6,54 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaQuery.css" />
+    <link rel="stylesheet" href="navbarstyle.css">
+    <style>
+     .header_toggle, .header_close{
+      display: none;
+     }
+     .logo img{
+      mix-blend-mode:hard-light;
+      height: 50px;
+     }
+    </style>
   </head>
   <body>
     <!-- header section -->
     <header>
-      <!-- nav  starts-->
-      <nav>
-        <div class="flex container nav-div">
-          <!-- logo starts -->
-          <div>
-            <h2>SPECIALZED</h2>
-          </div>
-          <!-- logo Ends -->
-          <!-- nav-links starts -->
-          <div>
-            <ul>
-              <li><a href="">Mountain</a></li>
-              <li><a href="">Road</a></li>
-              <li><a href="">Active</a></li>
-              <li><a href="">Electric</a></li>
-              <li><a href="">Kids</a></li>
-            </ul>
-          </div>
-          <!-- nav-links ends -->
-
-          <!-- search bar starts -->
-          <div>
-            <input type="text" placeholder="earch" name="" id="" />
-          </div>
-          <!-- search bar ends -->
-
-          <!-- mobile number starts -->
-          <div>
-            <p>+91 8984292</p>
-          </div>
-          <!-- mobile number ends -->
-
-          <!-- extra nav links starts  -->
-          <div>
-            <ul>
-              <li><a href="">Like</a></li>
-              <li><a href="">Cart</a></li>
-              <li><a href="">Shop</a></li>
-              <li><a href="">Account</a></li>
-            </ul>
-          </div>
-          <!-- extra nav links ends  -->
+      <div class="logo">
+        <!-- <h2 style="color: red;">SPECIALZED</h2> -->
+        <img src="Website/Website/logo.png" alt="">
+      </div>
+      <nav class="nav" id="nav-menu">
+        <i class="fa-solid fa-close header_close" id="close-menu" style="display: none;"></i>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="" class="nav-link">MOUNTAIN</a></li>
+          <li class="nav-item"><a href="" class="nav-link">ROAD</a></li>
+          <li class="nav-item"><a href="" class="nav-link">ACTIVE</a></li>
+          <li class="nav-item"><a href="" class="nav-link">ELECTRIC</a></li>
+          <li class="nav-item"><a href="" class="nav-link">KIDS</a></li>
+        </ul>
+        <div class="search-menu">
+          <input type="text" placeholder="Search" name="" id="">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="header-icons">
+          <ul>
+            <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+            <!-- <li><a href=""><i class="fa-solid fa-rotate" style="display: none;"></i></a></li> -->
+            <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="signUp.html"><i class="fa-regular fa-user"></i></a></li>
+          </ul>
         </div>
       </nav>
+      <i class="fa-solid fa-bars header_toggle" style="display: none;" id="toggle-menu"></i>
+    </header>
       <!-- nav  ends-->
 
       <!-- sub -header starts-->
       <div class="sub-header container">
         <div>
-          <p>Your Location : krev</p>
+          <p style="color: white;"><i class="fa-solid fa-location-dot"></i>Your Location : Mumbai</p>
           <ul>
             <li><a href="">About Us</a></li>
             <li><a href="">Delivery</a></li>
@@ -69,7 +63,9 @@
         </div>
       </div>
       <!-- sub -header ends-->
-    </header>
+
+
+
 
     <!-- hero section -->
     <main>
@@ -78,7 +74,7 @@
           THE POWER TO <br />
           RIDE MORE TRAILS
           <p>It's not just a new bike, it's you, only fresher</p>
-          <button>Catelog</button>
+          <button>Catalog</button>
         </div>
       </section>
     </main>
@@ -95,6 +91,10 @@
             <div class="bike-desc">
               <h4>Cycle - 1</h4>
               <h5>MRP. - 6000/-RS</h5>
+              <div>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
             </div>
             <!-- add icons -->
           </div>
@@ -103,6 +103,10 @@
             <div class="bike-desc">
               <h4>Cycle - 1</h4>
               <h5>MRP. - 6000/-RS</h5>
+              <div>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
             </div>
             <!-- add icons -->
           </div>
@@ -111,11 +115,15 @@
             <div class="bike-desc">
               <h4>Cycle - 1</h4>
               <h5>MRP. - 6000/-RS</h5>
+              <div>
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
             </div>
             <!-- add icons -->
           </div>
         </div>
-        <button>Catelog</button>
+        <button>Catalog</button>
         <div></div>
       </div>
     </section>
@@ -134,10 +142,7 @@
             id earum, obcaecati accusamus culpa laboriosam, fuga sint quis magni
             tempore repellat, aperiam a voluptate maxime quaerat! Ratione esse
             ullam molestias inventore unde accusamus reprehenderit consequuntur
-            doloribus error. Sint autem natus distinctio unde fugiat quibusdam
-            voluptatem dicta? Ratione aliquam, cupiditate dignissimos fugiat
-            odit error expedita beatae non consectetur quae laboriosam
-            similique, temporibus aperiam eligendi eos.
+            doloribus error.
           </p>
           <button>know more</button>
         </div>
@@ -159,6 +164,10 @@
               <div class="bike-desc">
                 <h4>Cycle - 1</h4>
                 <h5>MRP. - 6000/-RS</h5>
+                <div>
+                  <a href=""><i class="fa-regular fa-heart"></i></a>
+                  <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
               </div>
               <!-- add icons -->
             </div>
@@ -167,6 +176,10 @@
               <div class="bike-desc">
                 <h4>Cycle - 1</h4>
                 <h5>MRP. - 6000/-RS</h5>
+                <div>
+                  <a href=""><i class="fa-regular fa-heart"></i></a>
+                  <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
               </div>
               <!-- add icons -->
             </div>
@@ -175,11 +188,15 @@
               <div class="bike-desc">
                 <h4>Cycle - 1</h4>
                 <h5>MRP. - 6000/-RS</h5>
+                <div>
+                  <a href=""><i class="fa-regular fa-heart"></i></a>
+                  <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
               </div>
               <!-- add icons -->
             </div>
           </div>
-          <button>Catelog</button>
+          <button>Catalog</button>
           <div></div>
         </div>
       </section>
@@ -191,10 +208,16 @@
         <h2>know more about us</h2>
     </div>
     <div class="overlay-container">
-        <div class="overlay1 overlay">first</div>
-        <div class="flex">
-            <div class="overlay overlay2">second</div>
-            <div class="overlay overlay3">third</div>
+        <div class="overlay1 overlay">
+       
+        </div>
+        <div class="flex two-overlay">
+            <div class="overlay overlay2">
+       
+            </div>
+            <div class="overlay overlay3">
+        
+            </div>
         </div>
     </div>
 </div>
@@ -209,18 +232,18 @@
   <div class="min-container form-container">
 
 
-  <div class="flex">
+  <div class="flex numbers-div">
     <div>
       <h5>150000</h5>
-      <h5>150000</h5>
+      <h5>buyers per month</h5>
     </div>
     <div>
-      <h5>150000</h5>
-      <h5>150000</h5>
+      <h5>700</h5>
+      <h5>shops in the world</h5>
     </div>
     <div>
-      <h5>150000</h5>
-      <h5>150000</h5>
+      <h5>12</h5>
+      <h5>years waranty</h5>
     </div>
   </div>
 <div>
@@ -238,5 +261,139 @@
 
 
     <!-- footer -->
-  </body>
+
+<div>
+  <footer>
+    <div class="flex footer-container container">
+      <!-- first div for logo and icons -->
+      <div>
+ <h1>       SPECIALZED</h1>
+        <div>
+    <ul class="flex footer-icons">
+      <li>
+        <i class="fa-brands fa-youtube"></i>
+      </li>
+      <li>
+        <i class="fa-brands fa-facebook"></i>
+      </li>
+      <li><i class="fa-brands fa-linkedin"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+    </ul>
+        </div>
+      </div>
+<!-- second div for mountain -->
+      <div>
+        <h2>mountain</h2>
+        <ul>
+          <li>Cross Country</li>
+          <li>Downhill</li>
+          <li>Dint Jump</li>
+          <li>Frame</li>
+        </ul>
+      </div>
+ <!-- third div for road -->
+ <div>
+  <h2>road</h2>
+  <ul>
+    <li>Performance</li>
+    <li>Gravel</li>
+    <li>Cyclecross</li>
+    <li>Triathion</li>
+  </ul>
+</div>
+<!-- fourth div for active -->
+<div>
+  <h2>active</h2>
+  <ul>
+    <li>Fitness</li>
+    <li>Transport</li>
+    <li>Comfort</li>
+    <!-- <li></li> -->
+  </ul>
+</div>
+<!-- fifth div for mountain -->
+<div>
+  <h2>Electric</h2>
+  <ul>
+    <li>Fitness</li>
+    <li>Transport</li>
+    <li>Comfort</li>
+  </ul>
+</div>
+<!-- six div for kids -->
+<div>
+  <h2>kids</h2>
+  <ul>
+    <li>Fitness</li>
+    <li>Transport</li>
+    <li>Comfort</li>
+    <li>Comfort</li>
+  </ul>
+</div>
+<!-- seven div for customers -->
+<div>
+  <h2>customers</h2>
+  <ul>
+    <li>Fitness</li>
+    <li>Transport</li>
+    <li>Transport</li>
+    <li>Comfort</li>
+  </ul>
+</div>
+<!-- eight div for support-->
+<div>
+  <h2>support</h2>
+  <ul>
+    <li>Fitness</li>
+    <li>Transport</li>
+    <li>Comfort</li>
+  </ul>
+</div>
+
+    </div>
+  </footer>
+</div>
+
+
+<!-- font awesome icons CDN -->
+<script src="https://kit.fontawesome.com/6026d2ef44.js" crossorigin="anonymous"></script>
+
+<script>
+  const toggler = document.querySelector('#toggler');
+  const subheader = document.querySelector('.sub-header');
+  const searchBar = document.querySelector('.search-bar');
+  const mobileNo = document.querySelector('.mobile-no');
+ 
+  const navLinks = document.querySelector('.nav-links');
+
+toggler.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+
+  toggler.addEventListener('click',()=>{
+subheader.classList.toggle('active');
+searchBar.classList.toggle('active');
+mobileNo.classList.toggle('active');
+
+  })
+</script>
+
+<script>
+  const navmenu = document.getElementById('nav-menu');
+ const togglemenu = document.getElementById('toggle-menu');
+ const closeMenu = document.getElementById('close-menu');
+
+
+  togglemenu.addEventListener('click',()=>{
+      navmenu.classList.toggle('active');
+  })
+
+  
+  closeMenu.addEventListener('click',()=>{
+      navmenu.classList.remove('active');
+  })
+</script>
+</body>
+
 </html>

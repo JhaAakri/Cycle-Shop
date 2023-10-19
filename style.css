@@ -48,11 +48,32 @@ button {
   display: flex;
 }
 
+.search-menu{
+  border: 2px solid;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+.search-menu input{
+  background-color: transparent;
+  color: white;
+  border: none;
+  /* padding: 4px 10px; */
+}
+.search-menu input::placeholder{
+  color: white;
+}
+
+
 /* header styling */
 
 header {
   color: var(--text-white);
   background-color: var(--bg-black);
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .nav-div {
@@ -60,6 +81,11 @@ header {
   justify-content: space-between;
   border-bottom: 2px solid white;
   padding-block: 10px;
+}
+.nav-links{
+  gap: 50px;
+  /* margin: 0 40px; */
+  border: 2px solid;
 }
 .nav-div ul {
   display: flex;
@@ -76,6 +102,14 @@ header {
   gap: 20px;
 }
 
+
+.header-icons ul{
+  display: flex;
+  gap: 20px;
+}
+.header-icons ul i{
+  font-size: 22px;
+}
 /* main section */
 
 .hero-banner {
@@ -199,7 +233,11 @@ header {
   border-radius: 8px;
   box-shadow: 2px 2px 2px 2px rgba(155, 155, 44, 0.826);
 }
-
+.overlay p{
+  color: white;
+  max-width: 500px;
+  line-height: 20px;
+}
 .overlay::before {
   position: absolute;
   background-image: url("./Website/Website/InsideSpecialized_Retul_600x400.jpeg");
@@ -266,13 +304,52 @@ header {
   filter: blur(3px);
 }
 
-@media screen and (max-width: 480px) {
-  body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-  }
-  .nav-div ul {
-    display: none;
-  }
+.numbers-div div{
+  margin:  20px;
+ 
+}
+.numbers-div h5{
+  color: white;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* footer container */
+
+.footer-container{
+  justify-content: space-between;
+  padding-block: 50px;
+  gap: 20px;
+}
+.footer-container ul li {
+  color: white;
+}
+
+.footer-icons i{
+  font-size: 20px;
+}
+.footer-container h1{
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-container h2{
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.footer-icons{
+  gap: 10px;
+}
+
+.footer-container ul li{
+  margin: 10px 0;
+  font-size: 17px;
+}
+.footer-container ul li:hover{
+  text-decoration: underline;
+}
+.toggler{
+  display: none;
+
 }
