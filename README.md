@@ -15,7 +15,7 @@ HTML<br>
 CSS<br>
 JavaScript<br>
 
-API Deployment : JSON Server
+API Deployment : JSON Server<br>
 Along with that, in order to store user data and wishlist data we also used LocalStorage (aka browser storage).
 
 <h1>Description of Project.</h1>
