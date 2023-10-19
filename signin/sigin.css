@@ -113,53 +113,7 @@ body {
     font-size: 12px;
 }
 
-/* CSS for the popup */
 
-#signin-container .signin-successful-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#signin-container .signin-successful-overlay-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    max-width: 400px;
-}
-
-#signin-container .signin-successful-overlay .loading-gif {
-    margin-bottom: 10px;
-}
-
-#signin-container .signin-successful-overlay .loading-gif img {
-    width: 100px;
-}
-
-#signin-container .signin-successful-overlay p {
-    text-align: center;
-    margin: 0;
-}
-
-#navbar-container .user-profile {
-    display: none;
-}
-
-#navbar-container .search-bar {
-    margin-right: 20%;
-}
 
 /* responsive */
 
@@ -229,8 +183,5 @@ body {
     }
     #signin-container .checkbox-label {
         font-size: 15px;
-    }
-    #signin-container .popup {
-        width: 70%;
     }
 }
