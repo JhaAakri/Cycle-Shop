@@ -11,12 +11,9 @@ https://github.com/JhaAakri/Cycle-Shop.git
 <h1>Tech Stack 💻</h1>
 In this project we have used the following technologies:
 <br>
-
-<div style="display: flex; justify-content: space-between;">
-    <img src="../Cycle-Shop/tech/html.webp" alt="HTML" width="60" height="60">
-    <img src="/tech/css.webp" alt="CSS" width="60" height="60">
-    <img src="/tech/js.webp" alt="JavaScript" width="60" height="60">
-</div>
+HTML<br>
+CSS<br>
+JavaScript<br>
 
 API Deployment : JSON Server
 Along with that, in order to store user data and wishlist data we also used LocalStorage (aka browser storage).
