@@ -113,7 +113,9 @@ body {
     font-size: 12px;
 }
 
-
+#navbar-container .search-bar {
+    margin-right: 20%;
+}
 
 /* responsive */
 
@@ -183,5 +185,8 @@ body {
     }
     #signin-container .checkbox-label {
         font-size: 15px;
+    }
+    #signin-container .popup {
+        width: 70%;
     }
 }
