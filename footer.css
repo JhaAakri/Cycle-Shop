@@ -1,10 +1,14 @@
-/* Footer */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #footer-container {
     margin-top: 15%;
 }
 
 #footer-container #footer {
     background-color: #1c1c1c;
+    /* border: 1px solid green; */
     width: 100%;
     padding-top: 5%;
     color: aliceblue;
@@ -24,6 +28,7 @@
 
 #footer-container .Social_media div {
     display: flex;
+    /* align-items: center; */
 }
 
 #footer-container .Social_media div:last-child {
@@ -66,7 +71,7 @@
     width: 30%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0px auto;
     color: aliceblue;
 }
 
@@ -74,12 +79,13 @@
     margin-top: 20px;
     width: 80%;
     height: 80%;
+    /* border: 1px solid red; */
 }
 
 #footer-container .newsletter div input {
     height: 40px;
     width: 70%;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px 0px 0px 10px;
     background-color: #1c1c1c;
     border: 2px solid #747474;
     color: aliceblue;
@@ -87,7 +93,7 @@
 }
 
 #footer-container .newsletter div input:focus {
-    outline: 2px solid #747474;
+    outline: #747474;
 }
 
 #footer-container .newsletter div input::placeholder {
@@ -112,10 +118,11 @@
 
 #footer-container .newsletter div button {
     width: 29%;
-    height: 45px;
-    padding-bottom: 4px;
+    height: 46px;
+    padding-bottom: 2px;
     border: none;
-    border-radius: 0 10px 10px 0;
+    /* border: 2px dolid #747474; */
+    border-radius: 0px 10px 10px 0px;
     margin-left: -10px;
     background-color: #747474;
     color: #1c1c1c;
@@ -149,81 +156,124 @@
 #footer-container .animated-text span {
     display: inline-block;
     opacity: 0;
+    /* Initially hide the spans */
     position: relative;
+    /* Position the spans */
     top: -20px;
+    /* Move the spans up initially */
     animation: appearVibrateDisappearAnimation 8s infinite;
 }
 
 @keyframes appearVibrateDisappearAnimation {
     0% {
         opacity: 0;
+        /* Hide the spans */
         top: -20px;
+        /* Move the spans up */
     }
     10% {
         opacity: 1;
+        /* Show the spans */
         top: 0;
+        /* Bring the spans back to their original position */
     }
     30% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
     }
     70% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
     }
     80% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(-2px) rotate(-1deg);
+        /* Vibration effect */
     }
     82% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(2px) rotate(1deg);
+        /* Vibration effect */
     }
     84% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(-2px) rotate(-1deg);
+        /* Vibration effect */
     }
     86% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(2px) rotate(1deg);
+        /* Vibration effect */
     }
     88% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(-2px) rotate(-1deg);
+        /* Vibration effect */
     }
     90% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(2px) rotate(1deg);
+        /* Vibration effect */
     }
     92% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(-2px) rotate(-1deg);
+        /* Vibration effect */
     }
     94% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(2px) rotate(1deg);
+        /* Vibration effect */
     }
     96% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(-2px) rotate(-1deg);
+        /* Vibration effect */
     }
     98% {
         opacity: 1;
+        /* Keep the spans visible */
         top: 0;
+        /* Maintain the position */
         transform: translateX(2px) rotate(1deg);
+        /* Vibration effect */
     }
     100% {
         opacity: 0;
+        /* Hide the spans */
         top: 20px;
+        /* Move the spans down */
     }
 }
 
@@ -234,7 +284,8 @@
 }
 
 @keyframes vibrationAnimation {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateX(-2px) rotate(-1deg);
     }
     50% {
@@ -250,47 +301,74 @@
     line-height: 1;
 }
 
-@media screen and (max-width: 800px) {
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .category-box {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .category-title h3 {
-        font-size: 16px;
-    }
-
-    #footer-container #footer {
-        padding-top: 3%;
-    }
-
+@media screen and (min-width: 300px) and (max-width: 800px) {
     #footer-container .footer_top {
+        display: flex;
         flex-direction: column;
     }
-
     #footer-container .Social_media {
         width: 100%;
+        margin: auto;
         align-items: center;
     }
-
-    #footer-container .logo img {
-        width: 60%;
+    #footer-container .logo {
+        width: 100%;
     }
-
+    #footer-container .logo img {
+        width: 50%;
+        margin: auto;
+    }
+    #footer-container .newsletter {
+        text-align: center;
+        margin: 5%;
+        display: flex;
+        width: 100%;
+    }
+    #footer-container .newsletter div {
+        align-self: center;
+    }
+    #footer-container h4 {
+        margin-bottom: 0%;
+    }
+    #footer-container .footer-bottom {
+        width: 90%;
+        margin: auto;
+    }
     #footer-container .about {
         display: none !important;
     }
+}
 
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    #footer-container .footer_top {
+        display: flex;
+        flex-direction: column;
+    }
+    #footer-container .Social_media {
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    #footer-container .logo {
+        width: 100%;
+    }
+    #footer-container .logo img {
+        width: 50%;
+        margin: auto;
+    }
     #footer-container .newsletter {
         text-align: center;
-        margin: 5% 0;
+        margin: 5%;
+        display: flex;
+        width: 100%;
     }
-
     #footer-container .newsletter div {
         align-self: center;
+    }
+    #footer-container .footer-bottom p {
+        font-size: larger;
+    }
+    #footer-container .about {
+        display: none !important;
     }
 }

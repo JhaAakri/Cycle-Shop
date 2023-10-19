@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signin</title>
     <link rel="stylesheet" href="/footer.css" />
+    <link rel="stylesheet" href="/signin/navbar.css" />
+    <link rel="stylesheet" href="/signin/sigin.css" />
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
 <body>
+    <!-- nav -->
+    
     <div id="navbar-container">
         <div class="navbar">
             <div class="logo-menu navlogo" id="logo-menu">
                 <nav>
                     <img src="/Images/home-logo.png" class="navlogo" alt="logo" />
                     <ul>
-                        <li><a href=''>Catalog</a></li>
-                        <li><a href=''>Wishlist</a></li>
-                        <li><a href=''>Cart</a></li>
+                        <li><a href='#'>Catalog</a></li>
+                        <li><a href='#'>Wishlist</a></li>
+                        <li><a href='#'>Cart</a></li>
                         <li><a href="#">Support</a></li>
                     </ul>
                 </nav>
@@ -26,70 +32,21 @@
 
             <div class="search-bar">
                 <div id="nav_search_userpro">
-                    <!-- <input type="search" placeholder="Search" id="search"> -->
                     <input id="search-input" type="search" placeholder="Search..." />
                     <ul id="search-results"></ul>
                     <button><i class="fas fa-search"></i></button>
                 </div>
             </div>
 
-            <div class="user-profile">
-                <div id="loginOption" class="login-option">Login</div>
-                <img src="/Images/user.png" class="user-pic auth-user-pic" id="userPic" />
-                <div class="sub-menu-wrap" id="subMenu">
-                    <div class="sub-menu">
-                        <div class="user-info">
-                            <img src="/Images/user.png" />
-                            <h3></h3>
-                        </div>
-                        <hr />
-
-                        <a class='sub-menu-link' href=''>
-                <img src="/Images/cart.png" />
-                <p>Cart</p>
-                <span> > </span>
-              </a>
-                        <a class='sub-menu-link catalogue-link' href=''>
-                <img src="/Images/catalogue.png" />
-                <p>Catalogue</p>
-                <span> > </span>
-              </a>
-                        <a href="#" class="sub-menu-link">
-                <img src="/Images/setting.png" />
-                <p>Settings</p>
-                <span> > </span>
-              </a>
-                        <a class='sub-menu-link' href=''>
-                <img src="/Images/whishlist.png" />
-                <p>Wishlist</p>
-                <span> > </span>
-              </a>
-                        <a class='sub-menu-link' href='' id='logoutButton'>
-                <img src="/Images/logout.png" />
-                <p>Logout</p>
-                <span> > </span>
-              </a>
-                    </div>
-                </div>
             </div>
-        </div>
+            
     </div>
 
-    <!-- overlay loading container start -->
 
-    <div id="nav-logo-overlay-container">
-        <div class="nav-logo-overlay">
-            <img src="/Images/Loading gif.gif" alt="Loading..." />
-        </div>
-    </div>
-
-    <!-- overlay loading container ends  -->
-    <!--nav ends-->
-
-    <!-- =====================================================================signin-->
+    <!--signin-->
     <div id="signin-container">
 
-        <form action="/signin" id="signin-form" method="post">
+        <form action="/signin/signin.html" id="signin-form" method="post">
             <h2>Sign In to your Account</h2>
             <div>
                 <label for="email">Email:</label>
@@ -116,8 +73,7 @@
 
             <p>
                 I accept the Specialized Terms of Use and acknowledge Specialized will use my information in accordance with its
-                <a href="https://www.specialized.com/us/en/privacy-policy" target="_blank">Privacy Policy</a
-        >.
+                <a href="https://www.specialized.com/us/en/privacy-policy" target="_blank">Privacy Policy</a>
       </p>
 
       <div>
@@ -128,7 +84,7 @@
             </p>
         </form>
 
-        <!--------------------------------------------------------------- signin succesfull redirection overlay end--------------------------------------------------------------------->
+        <!--signin -->
 
         <div class="signin-successful-overlay" id="signin-successful-overlay" style="display: none">
             <div class="signin-successful-overlay-content">
@@ -140,8 +96,9 @@
             </div>
         </div>
     </div>
-    <!--------------------------------------------------------------- signin succesfull redirection overlay end--------------------------------------------------------------------->
+ <!-- footer -->
 
+ <footer id="footer">
     <div id="footer-container">
         <div id="footer">
             <div class="footer_top">
@@ -152,7 +109,7 @@
                     <div>
                         <a href="#"><img src="/Images/youtube.svg" alt=""></a>
                         <a href="#"><img src="/Images/facebook.svg" alt=""></a>
-                        <a href="#"><img src="/Images/logo.png" alt=""></a>
+                        <a href="#"><img src="/Images/Linkedin.png" alt=""></a>
                         <a href="#"><img src="/Images/instagram.svg" alt=""></a>
                     </div>
                 </div>
@@ -220,12 +177,10 @@
             </div>
         </div>
     </div>
+
+</footer>
 </body>
 
 </html>
+<script src="https://kit.fontawesome.com/593dd93f4e.js" crossorigin="anonymous"></script>
 
-<script type="module" src="../scripts/signin.js"></script>
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script type="module" src="../scripts/navBar.js"></script>
