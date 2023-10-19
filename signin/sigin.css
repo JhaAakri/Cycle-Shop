@@ -1,7 +1,7 @@
 body {
-    background-color: #363636;
-    /* background-image: url('/Images/logo1.jpg'); */
-
+    /* background-color: #363636; */
+    background-image: url('/Images/cycle.jpg');
+    /* background-size: cover; */
     margin: 0;
     padding: 0;
 }
