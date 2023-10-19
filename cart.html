@@ -8,73 +8,67 @@
 </head>
 <style>
     .container {
+        background-color: #464445;
         padding: 0;
         margin: 0;
         padding-top: 20px;
         display: flex;
         justify-content: center;
         align-items: start;
-        /* background-color: rgb(228, 40, 40); */
-        height: 500px;
+        height: 100%;
         width: 100%;
+    }
+    #parent{
+        display: flex;
+        flex-direction: column;
     }
 </style>
 
 <body>
     <div class="container">
-        <div id="parent"></div>
+        <div id="parent">ITEMS IN THE CART</div>
     </div>
 
     <script>
-
         const data = [
-
             {
                 "large_img": "https://m.media-amazon.com/images/I/41mXAbIYkCL._SX300_SY300_QL70_FMwebp_.jpg",
                 "title": "Urban Terrain UT1000 Steel MTB 27.5 Mountain Cycle",
                 "price": 11920,
                 "id": "bic1",
-
             },
+
             {
                 "large_img": "https://m.media-amazon.com/images/I/41mXAbIYkCL._SX300_SY300_QL70_FMwebp_.jpg",
                 "title": "Urban Terrain UT1000 Steel MTB 27.5 Mountain Cycle",
                 "price": 11920,
                 "id": "bic2",
             }
-
         ]
-
-
         var parent = document.getElementById("parent")
         // console.log(parent)
 
         if (data.length == 0) {
-            parent.textContent = "no item available"
-            var buttontxt = document.createElement('button')
-            buttontxt.textContent = "GO to home"
+            parent.textContent = "Cart Empty";
+            var buttontxt = document.createElement('button');
+            buttontxt.textContent = "Keep Shopping";
 
-            parent.append(buttontxt)
+            parent.append(buttontxt);
 
         }
         else {
-
             const elements = data.map((i) => {
 
                 var pQty = document.createElement('p');
-                pQty.textContent = 1
-
+                pQty.textContent = 1;
 
                 var newElement = document.createElement('div');
                 newElement.setAttribute('id', `${i.id}`)
                 var pName = document.createElement('p');
                 pName.textContent = `${i.title}`
 
-
                 var buttonplus = document.createElement('button')
                 var buttonmin = document.createElement('button')
-
-
 
                 buttonmin.textContent = '-'
 
@@ -86,7 +80,6 @@
 
                 var pQty = document.createElement('p');
                 pQty.textContent = 1
-
 
                 buttonplus.textContent = '+'
                 buttonplus.addEventListener('click', () => {
@@ -105,17 +98,11 @@
                     newElement
                 )
             })
-
             // console.log(elements)
-
-
             elements.forEach((e) => {
                 parent.append(e)
             })
-
-
         }
     </script>
 </body>
-
 </html>
