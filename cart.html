@@ -6,7 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <style>
+
+    /* header style */
+    header {
+  color: var(--text-white);
+  background-color: var(--bg-black);
+}
+
+.nav-div {
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+  padding-block: 10px;
+}
+.nav-div ul {
+  display: flex;
+  gap: 20px;
+}
+.sub-header div {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  padding-block: 10px;
+}
+.sub-header div ul {
+  display: flex;
+  gap: 20px;
+}
+/* header style end */
+
+
+
     .container {
         background-color: #464445;
         padding: 0;
@@ -18,15 +50,93 @@
         height: 100%;
         width: 100%;
     }
-    #parent{
+    .newElement{
         display: flex;
-        flex-direction: column;
+        margin: 20px;
+        gap:10px;
+    }
+
+
+    .buttonplus{
+        height: 30px;
+
+    }
+
+    .buttonmin{
+        height: 30px;
+
     }
 </style>
 
 <body>
+    <!-- header section -->
+    <header>
+        <!-- nav  starts-->
+        <nav>
+          <div class="flex container nav-div">
+            <!-- logo starts -->
+            <div>
+              <h2>SPECIALZED</h2>
+            </div>
+            <!-- logo Ends -->
+            <!-- nav-links starts -->
+            <div>
+              <ul>
+                <li><a href="">Mountain</a></li>
+                <li><a href="">Road</a></li>
+                <li><a href="">Active</a></li>
+                <li><a href="">Electric</a></li>
+                <li><a href="">Kids</a></li>
+              </ul>
+            </div>
+            <!-- nav-links ends -->
+  
+            <!-- search bar starts -->
+            <div>
+              <input type="text" placeholder="earch" name="" id="" />
+            </div>
+            <!-- search bar ends -->
+  
+            <!-- mobile number starts -->
+            <div>
+              <p>+91 8984292</p>
+            </div>
+            <!-- mobile number ends -->
+  
+            <!-- extra nav links starts  -->
+            <div>
+              <ul>
+                <li><a href="">Like</a></li>
+                <li><a href="">Cart</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Account</a></li>
+              </ul>
+            </div>
+            <!-- extra nav links ends  -->
+          </div>
+        </nav>
+        <!-- nav  ends-->
+  
+        <!-- sub -header starts-->
+        <div class="sub-header container">
+          <div>
+            <p>Your Location : krev</p>
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Delivery</a></li>
+              <li><a href="">Payment</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- sub -header ends-->
+      </header>
+
+
     <div class="container">
-        <div id="parent">ITEMS IN THE CART</div>
+        <div id="parent">
+           <h1 > ITEMS IN THE CART </h1>
+        </div>
     </div>
 
     <script>
@@ -63,12 +173,19 @@
                 pQty.textContent = 1;
 
                 var newElement = document.createElement('div');
-                newElement.setAttribute('id', `${i.id}`)
+                newElement.setAttribute('class','newElement');
+                newElement.setAttribute('id', `${i.id}`);
+
+                var newElementText= document.createElement('div');
+
                 var pName = document.createElement('p');
                 pName.textContent = `${i.title}`
 
                 var buttonplus = document.createElement('button')
                 var buttonmin = document.createElement('button')
+
+                buttonplus.setAttribute('class', 'buttonplus')
+                buttonmin.setAttribute('class', 'buttonplus')
 
                 buttonmin.textContent = '-'
 
@@ -91,17 +208,28 @@
                     pQty.textContent = parseInt(pQty.textContent) < 2 ? parseInt(pQty.textContent) : parseInt(pQty.textContent) - 1
                     pPrice.textContent = parseInt(pQty.textContent) * `${i.price}`
                 })
+                newElementText.append(pName, pPrice, buttonmin, pQty, buttonplus)
 
-                newElement.append(pimg, pName, pPrice, buttonmin, pQty, buttonplus)
+                newElement.append(pimg,newElementText )
 
                 return (
                     newElement
                 )
             })
+
+            var checkoutDiv= document.createElement("div")
+
+            var checkout= document.createElement("button")
+
+            checkoutDiv.append(checkout);
+
+            checkout.textContent="Checkout";
             // console.log(elements)
             elements.forEach((e) => {
                 parent.append(e)
             })
+
+            perent.append(checkoutDiv)
         }
     </script>
 </body>
