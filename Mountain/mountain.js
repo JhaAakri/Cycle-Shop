@@ -1,7 +1,7 @@
 let wishList = JSON.parse(localStorage.getItem('wishlist')) || [];
 let mainContainer = document.getElementById("products");
 let filterData = [];
-let materailFilter = [];
+let materialFilter = [];
 let url = 'https://bicycle-shop-json-server.cyclic.app/bikes';
 
 // Pagination variables
@@ -9,20 +9,21 @@ let pageNumber = 1;
 let itemsPerPage = 15;
 
 // Initialize the page
-featchData();
+fetchData();
 
-function featchData() {
+function fetchData() {
     fetch(url)
         .then(response => response.json())
         .then(data => {
             filterData = data;
-            materailFilter = data;
+            materialFilter = data;
             displayData(data);
             updatePagination();
         })
         .catch(error => console.error(error));
 }
 
+// Display data
 function displayData(data) {
     mainContainer.innerHTML = "";
     let start = (pageNumber - 1) * itemsPerPage;
@@ -30,7 +31,7 @@ function displayData(data) {
     let itemsToDisplay = data.slice(start, end);
 
     let productsContainer = document.getElementById('products');
-    productsContainer.innerHTML = ''; 
+    productsContainer.innerHTML = '';
 
     itemsToDisplay.forEach(item => {
         // Create and append elements for each item
@@ -61,76 +62,96 @@ function displayData(data) {
     });
 }
 
-// Add event listeners for filters and sorting
-function setupFilterListeners() {
-    // Material filter
-    let material = document.getElementById("material");
-    material.addEventListener("change", () => {
-        filterDataByMaterial(material.value);
-    });
+// Filter data by category
+function filterDataByCategory(categoryValue) {
+    if (categoryValue === '') {
+        displayData(materialFilter);
+        return;
+    }
 
-    // Color filter
-    let color = document.getElementById("color");
-    color.addEventListener("change", () => {
-        filterDataByColor(color.value);
-    });
-
-    // Brake type filter
-    let brakeType = document.getElementById("break");
-    brakeType.addEventListener("change", () => {
-        filterDataByBrakeType(brakeType.value);
-    });
-
-    // Suspension filter
-    let suspension = document.getElementById("suspension");
-    suspension.addEventListener("change", () => {
-        filterDataBySuspension(suspension.value);
-    });
-}
-
-function setupSortingListeners() {
-    // Sorting price functions (low and high)
-    let low = document.getElementById("low");
-    low.addEventListener("click", () => {
-        sortDataByPriceLow();
-    });
-
-    let high = document.getElementById("high");
-    high.addEventListener("click", () => {
-        sortDataByPriceHigh();
-    });
-}
-
-function filterDataByMaterial(materialValue) {
-    let filtered = materailFilter.filter(item => item.material.toLowerCase() === materialValue.toLowerCase());
+    let filtered = materialFilter.filter(item => item.category.toLowerCase() === categoryValue.toLowerCase());
     displayData(filtered);
 }
 
+// Filter data by material
+// function filterDataByMaterial(materialValue) {
+//     if (materialValue === '') {
+//         displayData(materialFilter);
+//         return;
+//     }
+
+//     let filtered = materialFilter.filter(item => item.material.toLowerCase() === materialValue.toLowerCase());
+//     displayData(filtered);
+// }
+
+// Filter data by color
 function filterDataByColor(colorValue) {
-    let filtered = materailFilter.filter(item => item.color.toLowerCase() === colorValue.toLowerCase());
+    if (colorValue === '') {
+        displayData(materialFilter);
+        return;
+    }
+
+    let filtered = materialFilter.filter(item => item.frame_colors[0].toLowerCase() === colorValue.toLowerCase());
     displayData(filtered);
 }
 
-function filterDataByBrakeType(brakeTypeValue) {
-    let filtered = materailFilter.filter(item => item.brakeType.toLowerCase() === brakeTypeValue.toLowerCase());
+// Filter data by brake type
+// function filterDataByBrakeType(brakeTypeValue) {
+//     if (brakeTypeValue === '') {
+//         displayData(materialFilter);
+//         return;
+//     }
+
+//     let filtered = materialFilter.filter(item => item.brakeType.toLowerCase() === brakeTypeValue.toLowerCase());
+//     displayData(filtered);
+// }
+
+// Filter data by suspension
+// function filterDataBySuspension(suspensionValue) {
+//     if (suspensionValue === '') {
+//         displayData(materialFilter);
+//         return;
+//     }
+
+//     let filtered = materialFilter.filter(item => item.suspension.toLowerCase() === suspensionValue.toLowerCase());
+//     displayData(filtered);
+// }
+
+// Filter data by wheel size
+function filterDataByWheelSize(wheelSizeValue) {
+    if (wheelSizeValue === '') {
+        displayData(materialFilter);
+        return;
+    }
+
+    let filtered = materialFilter.filter(item => item.size.toLowerCase() === wheelSizeValue.toLowerCase());
     displayData(filtered);
 }
 
-function filterDataBySuspension(suspensionValue) {
-    let filtered = materailFilter.filter(item => item.suspension.toLowerCase() === suspensionValue.toLowerCase());
+// Filter data by model year
+function filterDataByModelYear(yearValue) {
+    if (yearValue === '') {
+        displayData(materialFilter);
+        return;
+    }
+
+    let filtered = materialFilter.filter(item => item.year === parseInt(yearValue));
     displayData(filtered);
 }
 
+// Sort data by price (low to high)
 function sortDataByPriceLow() {
-    filterData.sort((a, b) => a.price - b.price);
-    displayData(filterData);
+    let sortedData = [...filterData].sort((a, b) => a.price - b.price);
+    displayData(sortedData);
 }
 
+// Sort data by price (high to low)
 function sortDataByPriceHigh() {
-    filterData.sort((a, b) => b.price - a.price);
-    displayData(filterData);
+    let sortedData = [...filterData].sort((a, b) => b.price - a.price);
+    displayData(sortedData);
 }
 
+// Toggle wishlist item
 function toggleWishList(item, button) {
     const index = wishList.findIndex(wishItem => wishItem.id === item.id);
     if (index !== -1) {
@@ -167,5 +188,108 @@ function updatePagination() {
 }
 
 // Initialize filter and sorting listeners
+function setupFilterListeners() {
+    // Material filter
+    // let material = document.getElementById("material");
+    // material.addEventListener("change", () => {
+    //     filterDataByMaterial(material.value);
+    // });
+
+    // Color filter
+    let color = document.getElementById("color");
+    color.addEventListener("change", () => {
+        filterDataByColor(color.value);
+    });
+
+    // Brake type filter
+    // let brakeType = document.getElementById("break");
+    // brakeType.addEventListener("change", () => {
+    //     filterDataByBrakeType(brakeType.value);
+    // });
+
+    // Suspension filter
+    // let suspension = document.getElementById("suspension");
+    // suspension.addEventListener("change", () => {
+    //     filterDataBySuspension(suspension.value);
+    // });
+
+    // Wheel size filter
+    let wheelSize = document.getElementById("wheel");
+    wheelSize.addEventListener("change", () => {
+        filterDataByWheelSize(wheelSize.value);
+    });
+
+    // Model year filter
+    let modelYear = document.getElementById("year");
+    modelYear.addEventListener("change", () => {
+        filterDataByModelYear(modelYear.value);
+    });
+
+    // Category filter
+    let category = document.getElementById("category");
+    category.addEventListener("change", () => {
+        filterDataByCategory(category.value);
+    });
+}
+
+function sortDataByPrice() {
+    let sortOption = document.getElementById("sort").value;
+    if (sortOption === "low") {
+        sortDataByPriceLow();
+    } else if (sortOption === "high") {
+        sortDataByPriceHigh();
+    }
+}
+
+function setupSortingListeners() {
+    // Sort button
+    let sortButton = document.getElementById("sort");
+    sortButton.addEventListener("change", sortDataByPrice);
+}
+
+// Initialize filter and sorting listeners
 setupFilterListeners();
 setupSortingListeners();
+
+
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Make the API request here
+//     fetchDataFromAPI();
+//   });
+
+  
+//   function fetchDataFromAPI() {
+//     // fetch request to the API
+//     fetch("https://bicycle-shop-json-server.cyclic.app/bikes")
+//       .then((response) => response.json())
+//       .then((data) => {
+//         const productsElement = document.getElementById("products");
+  
+//         // Loop through the data and append each item to the #products element
+//         data.forEach((item) => {
+//           const productElement = document.createElement("div");
+//           productElement.className = "product";
+  
+//           // HTML structure for each product using the data
+//           productElement.innerHTML = `
+//             <img src="${item.large_img}" alt="Product Image">
+//             <p>Price: $${item.price}</p>
+//             <p>Category: ${item.title}</p>
+//           `;
+  
+//           // Append the product to the #products element
+//           productsElement.appendChild(productElement);
+//         });
+//       })
+//       .catch((error) => {
+//         console.error("Error fetching data from the API: ", error);
+//       });
+//   }
+  
