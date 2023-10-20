@@ -89,7 +89,14 @@
     flex-direction: column;
     margin: 30px;
   }
+  .best-sellers{
+  max-width: 100%;
+  flex-direction: row;
+}
 
+.best-sellers .single-bike {
+  max-width: 350px;
+}
   .brain-techno-container::before {
     background-size: contain;
   }

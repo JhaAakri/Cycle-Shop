@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <style>
+     .header-toggle,
+.header-close {
+  display: none !important;
+}
+
+      .logo img {
+        mix-blend-mode: hard-light;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <div class="logo">
+        <!-- <h2 style="color: red;">SPECIALZED</h2> -->
+        <img src="img/logo.png" alt="" />
+      </div>
+      <nav class="nav" id="nav-menu">
+        <i
+          class="fa-solid fa-close header_close"
+          id="close-menu"
+    
+        ></i>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="" class="nav-link">MOUNTAIN</a></li>
+          <li class="nav-item"><a href="" class="nav-link">ROAD</a></li>
+          <li class="nav-item"><a href="" class="nav-link">ACTIVE</a></li>
+          <li class="nav-item"><a href="" class="nav-link">ELECTRIC</a></li>
+          <li class="nav-item"><a href="" class="nav-link">KIDS</a></li>
+        </ul>
+        <div class="search-menu">
+          <input type="text" placeholder="Search" name="" id="search_input" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="header-icons">
+          <ul>
+            <li>
+              <a href=""><i class="fa-regular fa-heart"></i></a>
+            </li>
+            <!-- <li>
+              <a href=""><i class="fa-solid fa-rotate"></i></a>
+            </li> -->
+            <li>
+              <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li>
+              <a href="signUp.html"><i class="fa-regular fa-user"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <i
+        class="fa-solid fa-bars header_toggle"
+     
+        id="toggle-menu"
+      ></i>
+    </header>
+    <!-- nav  ends-->
+
+    <!-- sub -header starts-->
+    <div class="sub-header container">
+      <div>
+        <p style="color: white">
+          <i class="fa-solid fa-location-dot"></i>Your Location : Mumbai
+        </p>
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Delivery</a></li>
+          <li><a href="">Payment</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- sub -header ends-->
+
+    <script
+      src="https://kit.fontawesome.com/6026d2ef44.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const navmenu = document.getElementById("nav-menu");
+      const togglemenu = document.getElementById("toggle-menu");
+      const closeMenu = document.getElementById("close-menu");
+
+      togglemenu.addEventListener("click", () => {
+        navmenu.classList.toggle("active");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        navmenu.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

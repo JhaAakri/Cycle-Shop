@@ -48,68 +48,8 @@ button {
   display: flex;
 }
 
-.search-menu{
-  border: 2px solid;
-  padding: 4px 10px;
-  border-radius: 8px;
-}
-.search-menu input{
-  background-color: transparent;
-  color: white;
-  border: none;
-  /* padding: 4px 10px; */
-}
-.search-menu input::placeholder{
-  color: white;
-}
 
 
-/* header styling */
-
-header {
-  color: var(--text-white);
-  background-color: var(--bg-black);
-}
-.nav{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.nav-div {
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid white;
-  padding-block: 10px;
-}
-.nav-links{
-  gap: 50px;
-  /* margin: 0 40px; */
-  border: 2px solid;
-}
-.nav-div ul {
-  display: flex;
-  gap: 20px;
-}
-.sub-header div {
-  display: flex;
-  justify-content: end;
-  gap: 30px;
-  padding-block: 10px;
-}
-.sub-header div ul {
-  display: flex;
-  gap: 20px;
-}
-
-
-.header-icons ul{
-  display: flex;
-  gap: 20px;
-}
-.header-icons ul i{
-  font-size: 22px;
-}
 /* main section */
 
 .hero-banner {
@@ -121,7 +61,7 @@ header {
 
 .hero-banner::before {
   position: absolute;
-  background-image: url("./Website/Website/GravelHomepageAssetsDesktop.jpeg");
+  background-image: url("img/GravelHomepageAssetsDesktop.jpeg");
   content: "";
   top: 0;
   left: 0;
@@ -162,14 +102,24 @@ header {
   gap: 20px;
   margin-block: 20px;
 }
-.bikes-container .single-bike {
-  max-width: 350px;
-  border: 2px solid;
+.bikes-container .single-bike{
+  max-width: 550px;
+  background-color: white;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.best-sellers{
+  flex-wrap: wrap;
+}
+.best-sellers .single-bike {
+  max-width: 30%;
   background-color: white;
   border-radius: 8px;
 }
 .bikes-container .single-bike img {
   width: 100%;
+  text-align: center;
 }
 .bikes-container .single-bike .bike-desc {
   padding: 10px 5px;
@@ -191,7 +141,7 @@ header {
 
 .brain-techno-container::before {
   position: absolute;
-  background-image: url("./Website/Website/GravelHomepageAssetsDesktop.jpeg");
+  background-image: url("img/GravelHomepageAssetsDesktop.jpeg");
   content: "";
   top: 0;
   left: 0;
@@ -240,7 +190,7 @@ header {
 }
 .overlay::before {
   position: absolute;
-  background-image: url("./Website/Website/InsideSpecialized_Retul_600x400.jpeg");
+  background-image: url("img/InsideSpecialized_Retul_600x400.jpeg");
   content: "";
   top: 0;
   left: 0;
@@ -253,10 +203,10 @@ header {
   filter: brightness(0.5);
 }
 .overlay1::before {
-  background-image: url("./Website/Website/03_SUB_Leonid_Furmansky_Specialized_Domain_Final_Web_20copy.jpeg");
+  background-image: url("img/03_SUB_Leonid_Furmansky_Specialized_Domain_Final_Web_20copy.jpeg");
 }
 .overlay2::before {
-  background-image: url("./Website/Website/NavigationalTiles_KidsBikes_1200x1200_01.jpeg");
+  background-image: url("img/NavigationalTiles_KidsBikes_1200x1200_01.jpeg");
   background-position: center;
   background-size: cover;
 }
@@ -278,7 +228,7 @@ header {
   box-shadow: 2px 2px 2px 2px rgba(155, 155, 44, 0.826);
 }
 .form-container {
-  background-image: url("./Website/Website/ROAD-5758_Tarmac_SL8_Launch_Desktop_2880x1620_01.jpeg");
+  background-image: url("img/ROAD-5758_Tarmac_SL8_Launch_Desktop_2880x1620_01.jpeg");
   height: 80%;
   width: 100%;
   margin: 50px auto;
@@ -290,7 +240,7 @@ header {
 
 .contact-overlay::before {
   position: absolute;
-  background-image: url("./Website/Website/ROAD-5758_Tarmac_SL8_Launch_Desktop_2880x1620_01.jpeg");
+  background-image: url("img/ROAD-5758_Tarmac_SL8_Launch_Desktop_2880x1620_01.jpeg");
   content: "";
   top: 0;
   left: 0;
@@ -312,44 +262,4 @@ header {
   color: white;
   font-weight: 400;
   font-size: 30px;
-}
-
-/* footer container */
-
-.footer-container{
-  justify-content: space-between;
-  padding-block: 50px;
-  gap: 20px;
-}
-.footer-container ul li {
-  color: white;
-}
-
-.footer-icons i{
-  font-size: 20px;
-}
-.footer-container h1{
-  color: white;
-  margin-bottom: 20px;
-}
-
-.footer-container h2{
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-.footer-icons{
-  gap: 10px;
-}
-
-.footer-container ul li{
-  margin: 10px 0;
-  font-size: 17px;
-}
-.footer-container ul li:hover{
-  text-decoration: underline;
-}
-.toggler{
-  display: none;
-
 }

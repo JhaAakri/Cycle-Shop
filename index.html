@@ -6,64 +6,10 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaQuery.css" />
-    <link rel="stylesheet" href="navbarstyle.css">
-    <style>
-     .header_toggle, .header_close{
-      display: none;
-     }
-     .logo img{
-      mix-blend-mode:hard-light;
-      height: 50px;
-     }
-    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   </head>
   <body>
-    <!-- header section -->
-    <header>
-      <div class="logo">
-        <!-- <h2 style="color: red;">SPECIALZED</h2> -->
-        <img src="Website/Website/logo.png" alt="">
-      </div>
-      <nav class="nav" id="nav-menu">
-        <i class="fa-solid fa-close header_close" id="close-menu" style="display: none;"></i>
-        <ul class="nav-list">
-          <li class="nav-item"><a href="" class="nav-link">MOUNTAIN</a></li>
-          <li class="nav-item"><a href="" class="nav-link">ROAD</a></li>
-          <li class="nav-item"><a href="" class="nav-link">ACTIVE</a></li>
-          <li class="nav-item"><a href="" class="nav-link">ELECTRIC</a></li>
-          <li class="nav-item"><a href="" class="nav-link">KIDS</a></li>
-        </ul>
-        <div class="search-menu">
-          <input type="text" placeholder="Search" name="" id="">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <div class="header-icons">
-          <ul>
-            <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
-            <!-- <li><a href=""><i class="fa-solid fa-rotate" style="display: none;"></i></a></li> -->
-            <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li><a href="signUp.html"><i class="fa-regular fa-user"></i></a></li>
-          </ul>
-        </div>
-      </nav>
-      <i class="fa-solid fa-bars header_toggle" style="display: none;" id="toggle-menu"></i>
-    </header>
-      <!-- nav  ends-->
-
-      <!-- sub -header starts-->
-      <div class="sub-header container">
-        <div>
-          <p style="color: white;"><i class="fa-solid fa-location-dot"></i>Your Location : Mumbai</p>
-          <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Delivery</a></li>
-            <li><a href="">Payment</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- sub -header ends-->
-
 
 
 
@@ -74,7 +20,7 @@
           THE POWER TO <br />
           RIDE MORE TRAILS
           <p>It's not just a new bike, it's you, only fresher</p>
-          <button>Catalog</button>
+          <button>Catelog</button>
         </div>
       </section>
     </main>
@@ -85,9 +31,42 @@
         <div class="section-heading">
           <h2>choose our best sellers</h2>
         </div>
-        <div class="bikes-container flex">
+        <div class="bikes-container swiper mySwiper flex">
+
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="single-bike">
+                <img src="img/01.jpg" alt="" />
+                <div class="bike-desc">
+                  <h4>Cycle - 1</h4>
+                  <h5>MRP. - 6000/-RS</h5>
+                  <div>
+                    <a href=""><i class="fa-regular fa-heart"></i></a>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+                <!-- add icons -->
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-bike">
+                <img src="img/02.jpg" alt="" />
+                <div class="bike-desc">
+                  <h4>Cycle - 1</h4>
+                  <h5>MRP. - 6000/-RS</h5>
+                  <div>
+                    <a href=""><i class="fa-regular fa-heart"></i></a>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+                <!-- add icons -->
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              
           <div class="single-bike">
-            <img src="./Website/Website/002.jpeg" alt="" />
+            <img src="img/03.jpg" alt="" />
             <div class="bike-desc">
               <h4>Cycle - 1</h4>
               <h5>MRP. - 6000/-RS</h5>
@@ -98,32 +77,18 @@
             </div>
             <!-- add icons -->
           </div>
-          <div class="single-bike">
-            <img src="./Website/Website/002.jpeg" alt="" />
-            <div class="bike-desc">
-              <h4>Cycle - 1</h4>
-              <h5>MRP. - 6000/-RS</h5>
-              <div>
-                <a href=""><i class="fa-regular fa-heart"></i></a>
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-              </div>
+       
             </div>
-            <!-- add icons -->
           </div>
-          <div class="single-bike">
-            <img src="./Website/Website/002.jpeg" alt="" />
-            <div class="bike-desc">
-              <h4>Cycle - 1</h4>
-              <h5>MRP. - 6000/-RS</h5>
-              <div>
-                <a href=""><i class="fa-regular fa-heart"></i></a>
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-              </div>
-            </div>
-            <!-- add icons -->
-          </div>
+   
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
         </div>
-        <button>Catalog</button>
+
+
+        <button>Catelog</button>
         <div></div>
       </div>
     </section>
@@ -153,14 +118,14 @@
 
 
     <!-- choose our best sellers -->
-    <section class="min-container" id="section3">
+    <section class="min-container " id="section3">
         <div>
           <div class="section-heading">
             <h2>bike discount of this month </h2>
           </div>
-          <div class="bikes-container flex">
+          <div class="bikes-container best-sellers flex">
             <div class="single-bike">
-              <img src="./Website/Website/002.jpeg" alt="" />
+              <img src="img/01.jpg" alt="" />
               <div class="bike-desc">
                 <h4>Cycle - 1</h4>
                 <h5>MRP. - 6000/-RS</h5>
@@ -172,7 +137,7 @@
               <!-- add icons -->
             </div>
             <div class="single-bike">
-              <img src="./Website/Website/002.jpeg" alt="" />
+              <img src="img/02.jpg" alt="" />
               <div class="bike-desc">
                 <h4>Cycle - 1</h4>
                 <h5>MRP. - 6000/-RS</h5>
@@ -184,7 +149,43 @@
               <!-- add icons -->
             </div>
             <div class="single-bike">
-              <img src="./Website/Website/002.jpeg" alt="" />
+              <img src="img/03.jpg" alt="" />
+              <div class="bike-desc">
+                <h4>Cycle - 1</h4>
+                <h5>MRP. - 6000/-RS</h5>
+                <div>
+                  <a href=""><i class="fa-regular fa-heart"></i></a>
+                  <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <!-- add icons -->
+            </div>
+            <div class="single-bike">
+              <img src="img/03.jpg" alt="" />
+              <div class="bike-desc">
+                <h4>Cycle - 1</h4>
+                <h5>MRP. - 6000/-RS</h5>
+                <div>
+                  <a href=""><i class="fa-regular fa-heart"></i></a>
+                  <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <!-- add icons -->
+            </div>
+            <div class="single-bike">
+              <img src="img/03.jpg" alt="" />
+              <div class="bike-desc">
+                <h4>Cycle - 1</h4>
+                <h5>MRP. - 6000/-RS</h5>
+                <div>
+                  <a href=""><i class="fa-regular fa-heart"></i></a>
+                  <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <!-- add icons -->
+            </div>
+            <div class="single-bike">
+              <img src="img/03.jpg" alt="" />
               <div class="bike-desc">
                 <h4>Cycle - 1</h4>
                 <h5>MRP. - 6000/-RS</h5>
@@ -196,7 +197,7 @@
               <!-- add icons -->
             </div>
           </div>
-          <button>Catalog</button>
+          <button>Catelog</button>
           <div></div>
         </div>
       </section>
@@ -259,140 +260,31 @@
 
 
 
-
-    <!-- footer -->
-
-<div>
-  <footer>
-    <div class="flex footer-container container">
-      <!-- first div for logo and icons -->
-      <div>
- <h1>       SPECIALZED</h1>
-        <div>
-    <ul class="flex footer-icons">
-      <li>
-        <i class="fa-brands fa-youtube"></i>
-      </li>
-      <li>
-        <i class="fa-brands fa-facebook"></i>
-      </li>
-      <li><i class="fa-brands fa-linkedin"></i></li>
-      <li><i class="fa-brands fa-instagram"></i></li>
-    </ul>
-        </div>
-      </div>
-<!-- second div for mountain -->
-      <div>
-        <h2>mountain</h2>
-        <ul>
-          <li>Cross Country</li>
-          <li>Downhill</li>
-          <li>Dint Jump</li>
-          <li>Frame</li>
-        </ul>
-      </div>
- <!-- third div for road -->
- <div>
-  <h2>road</h2>
-  <ul>
-    <li>Performance</li>
-    <li>Gravel</li>
-    <li>Cyclecross</li>
-    <li>Triathion</li>
-  </ul>
-</div>
-<!-- fourth div for active -->
-<div>
-  <h2>active</h2>
-  <ul>
-    <li>Fitness</li>
-    <li>Transport</li>
-    <li>Comfort</li>
-    <!-- <li></li> -->
-  </ul>
-</div>
-<!-- fifth div for mountain -->
-<div>
-  <h2>Electric</h2>
-  <ul>
-    <li>Fitness</li>
-    <li>Transport</li>
-    <li>Comfort</li>
-  </ul>
-</div>
-<!-- six div for kids -->
-<div>
-  <h2>kids</h2>
-  <ul>
-    <li>Fitness</li>
-    <li>Transport</li>
-    <li>Comfort</li>
-    <li>Comfort</li>
-  </ul>
-</div>
-<!-- seven div for customers -->
-<div>
-  <h2>customers</h2>
-  <ul>
-    <li>Fitness</li>
-    <li>Transport</li>
-    <li>Transport</li>
-    <li>Comfort</li>
-  </ul>
-</div>
-<!-- eight div for support-->
-<div>
-  <h2>support</h2>
-  <ul>
-    <li>Fitness</li>
-    <li>Transport</li>
-    <li>Comfort</li>
-  </ul>
-</div>
-
-    </div>
-  </footer>
-</div>
-
-
 <!-- font awesome icons CDN -->
 <script src="https://kit.fontawesome.com/6026d2ef44.js" crossorigin="anonymous"></script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
 <script>
-  const toggler = document.querySelector('#toggler');
-  const subheader = document.querySelector('.sub-header');
-  const searchBar = document.querySelector('.search-bar');
-  const mobileNo = document.querySelector('.mobile-no');
- 
-  const navLinks = document.querySelector('.nav-links');
-
-toggler.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-
-  toggler.addEventListener('click',()=>{
-subheader.classList.toggle('active');
-searchBar.classList.toggle('active');
-mobileNo.classList.toggle('active');
-
-  })
-</script>
-
-<script>
-  const navmenu = document.getElementById('nav-menu');
- const togglemenu = document.getElementById('toggle-menu');
- const closeMenu = document.getElementById('close-menu');
-
-
-  togglemenu.addEventListener('click',()=>{
-      navmenu.classList.toggle('active');
-  })
-
-  
-  closeMenu.addEventListener('click',()=>{
-      navmenu.classList.remove('active');
-  })
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 </script>
 </body>
 

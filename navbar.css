@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+header {
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 8px;
+}
+
+.nav-link {
+  padding: 12px;
+  color: white;
+  font-size: 18px;
+}
+
+.header-toggle,
+.header-close {
+  display: none;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.search-menu {
+  border: 2px solid;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+.search-menu input {
+  background-color: transparent;
+
+  color: white;
+  border: none;
+  /* padding: 4px 10px; */
+}
+.search-menu input::placeholder {
+  color: white;
+}
+#search_input{
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.sub-header {
+  background-color: rgba(0, 0, 0, 0.875);
+  color: white;
+}
+.sub-header div {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  align-items: center;
+  padding-block: 10px;
+}
+.sub-header div ul {
+  display: flex;
+  gap: 20px;
+}
+.sub-header div ul li a {
+  color: white;
+}
+.header-icons ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav i {
+  color: white;
+}
+i {
+  /* color: white; */
+}
+.header-icons ul i {
+  font-size: 22px;
+  color: white;
+}
+
+.header_close,
+.header_toggle {
+  display: none !important;
+}
+@media screen and (max-width: 480px) {
+  .header_close,
+  .header_toggle {
+    display: block !important;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  header {
+    height: 40px;
+    justify-content: space-between;
+  }
+  .sub-header{
+    display: none;
+  }
+  .header-toggle {
+    display: inline;
+    color: white;
+    font-size: 24px;
+  }
+
+  .header_close {
+    position: absolute;
+    /* top: 90px; */
+    right: 24px;
+    display: block;
+    font-size: 24px;
+    color: white;
+  }
+
+  i {
+    color: white;
+  }
+  .nav {
+    position: fixed;
+    /* top: 5%; */
+    top: 0;
+    height: 100vh;
+    right: -100%;
+    background-color: black;
+    color: white;
+    width: 60%;
+    padding: 24px 0;
+    height: 100vh;
+    z-index: 100;
+    transition: 0.5s;
+    border-radius: 0 0 0 50%;
+  }
+  ul li {
+    list-style-type: none;
+    margin: 20px 0;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-item {
+    margin: 20px 0;
+  }
+  .active {
+    right: 0;
+  }
+}
