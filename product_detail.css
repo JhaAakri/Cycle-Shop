@@ -3,9 +3,27 @@
     /* font-family: 'Raleway', sans-serif; */
     font-family: 'Poppins', sans-serif;
 }
-/* nav css */
+/* slider css */
 
-/* nav css ends */
+/* .slider {
+    text-align: center;
+  }
+  
+  .next,.prev {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #sliderImage {
+    max-width: 100%;
+    max-height: 300px;
+    border: 1px solid #ccc;
+  }
+   */
+/* slider css ends */
+
+
 .scale:hover{
     transform: scale(1.05);
 }
