@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cycle Hub</title>
     <link rel = "icon" href = " " type = "image/x-icon"> 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="product_detail.css">
 </head>
 <body>
      <div id="one">
@@ -31,16 +31,39 @@
        
         <div id="one_right">
             <h1 id="title">DUMMY TEXT FOR CYCLE TITLE</h1>
+            <h3 id="category"></h3>
+            <hr class="brtag">
             <div id="one_1">
-                <span>
+                <span id="rating">
                     <img src="/Images/star.png" alt="">
                     <img src="/Images/star.png" alt="">
                     <img src="/Images/star.png" alt="">
                     <img src="/Images/star.png" alt="">
-                    <p>- 4</p>
+                    <p id="rating_number">- 4</p>
                 </span>
                 <p id="year">S/N - dummy text</p>
             </div>
+            <hr class="brtag">
+            <div class="offers">
+                <div class="offers_card">
+                    <p> AMERICAN EXPRESS:- </p>
+                    <p> Get 10% off on amex cards .</p>
+                </div>
+                <div class="offers_card">
+                    <p> CARD OFFERS:- </p>
+                    <p> Get 5% cashback on Visa and Mastercard.</p>
+                </div>
+                <div class="offers_card">
+                    <p>  EMI OFFER:- </p>
+                    <p> No cost emi upto 6 months</p>
+                </div>
+            </div>
+            <hr class="brtag">
+            <div id="price_div">
+                <p>Special Discount</p>
+                <h1 id="price">Dummytext</h1>
+            </div>
+            <hr class="brtag">
             <div id="one_2">
                 <div>
                     <p>Color</p>
@@ -55,38 +78,19 @@
                             <h5 id="size_text">Size guide <img class="rulerimg" src="/images/ruler.png" alt=""></h5>
                         </div>
                         <div>
-                            <button>XS</button>
-                            <button>S</button>
-                            <button>M</button>
+                            <button class="scale">XS</button>
+                            <button class="scale">S</button>
+                            <button class="scale">M</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="offers">
-                <div class="offers_card">
-                    <p>AMERICAN EXPRESS:- </p>
-                    <p> Get 10% off on amex cards .</p>
-                </div>
-                <div class="offers_card">
-                    <p>CARD OFFERS:- </p>
-                    <p> Get 5% cashback on Visa and Mastercard.</p>
-                </div>
-                <div class="offers_card">
-                    <p>EMI OFFER:- </p>
-                    <p> No cost emi upto 6 months</p>
-                </div>
-            </div>
-            <hr>
-            <div id="price_div">
-                <p>Special Discount</p>
-                <h1 id="price">Dummytext</h1>
-            </div>
-            <hr >
+           
+            <hr class="brtag">
             <div class="function_buttons">
                 <button id="addtocartbtn"> <img src="/images/cart.png" alt=""> ADD TO CART</button>
                 <BUTTon id="quickorderbtn"> QUICK ORDER</BUTTon>
-                <BUtton class="miscbtn"><img class="fbtnimg" src="/images/heart.png" alt=""></BUtton>
+                <BUtton class="miscbtn" ><img  class="fbtnimg" src="/images/heart.png" alt=""></BUtton>
                 <button class="miscbtn"><img class="fbtnimg" src="/images/share.png" alt=""></button>
             </div>
 
@@ -190,6 +194,18 @@
                         <img src="/Images/star.png" alt="">
                         <img src="/Images/star.png" alt="">
                         <img src="/Images/star.png" alt="">
+                    </div>
+                </div>
+                <div class="review_card">
+                    <h3>SHUBHANGI</h3>
+                    <p> race bike DNA while testing the F7 – it’s stiff in all the right areas, responds to the lightest touch when the road  4mm Allen bit. You’ll need a torque wrench to retighten them once you’ve made the adjustment.</p>
+                    <div class="review_card_star">
+                        <img src="/Images/star.png" alt="">
+                        <img src="/Images/star.png" alt="">
+                        <img src="/Images/star.png" alt="">
+                        <img src="/Images/star.png" alt="">
+                        <img src="/Images/star.png" alt="">
+                        
                     </div>
                 </div>
                 <div class="review_card">
@@ -308,10 +324,6 @@
         </div>
     </footer>
      <!-- footer ends -->
-
-
-
-
 </body>
 </html>
-<script src="index.js"></script>
+<script src="product_detail.js"></script>

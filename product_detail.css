@@ -1,11 +1,22 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
-   /* // background-color: #464445; */
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 /* nav css */
 
 /* nav css ends */
+.scale:hover{
+    transform: scale(1.05);
+}
+.miscbtn:hover{
+    transform: scale(1.05);
+}
+.brtag{
+    margin: 17px 0;
+    width: 105%;
+    margin-right: 2.5%;
+}
 #one{
     background-color:  #464445; 
 }
@@ -45,7 +56,6 @@ hr{
     word-spacing:1px;
     letter-spacing: 1px;
     font-weight: 400;
-    margin: 0;
 }
 #one_1>span{
     display: flex;
@@ -68,12 +78,22 @@ hr{
     height:35px;
     width: 35px;
     border-radius: 50%;
+    
 }
 #one_2>div>p{
     margin: 8px 0px;
 }
 .Grb{
     background-color: green;
+}
+.whiteb:hover{
+    transform: scale(1.05);
+}
+.Grb:hover{
+    transform: scale(1.05);
+}
+.blueb:hover{
+    transform: scale(1.05);
 }
 .blueb{
     background-color: rgb(4, 89, 89);
@@ -126,16 +146,16 @@ hr{
     letter-spacing: 2px;
 }
 #price_div{
-    width: 150px;
+    width: 250px;
     margin: 25px 0;
 }
 #price_div> p{
-    font-size: 14px;
+    font-size: 16px;
     color:#DC211B;
     font-weight: 150;
     letter-spacing: .7px;
     margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 #price_div>h1{
     margin-top: 0;
@@ -161,14 +181,25 @@ hr{
     height: 50px;
     padding: 0;
 }
+#quickorderbtn{
+    color: black;
+}
+#quickorderbtn:hover{
+    transform: scale(1.05);
+}
 #addtocartbtn,#quickorderbtn{
     border: 2px solid #C4C8C6;
     flex-grow: 2;
     font-size: 17px;
 }
 #addtocartbtn{
+
     background-color:#DC211B
 }
+#addtocartbtn:hover{
+    transform: scale(1.05);
+}
+
 .function_buttons{
     flex-grow: 1;
     display: flex;
@@ -355,7 +386,7 @@ hr{
     flex-direction: column;
     background-color: #C6891E;
     width: 100%;
-    max-width: 250px;
+    max-width: 190px;
     height: auto;
     padding: 15px;
     border:2px solid #C4C8C6;
@@ -385,6 +416,7 @@ hr{
 }
 .review_card_star>img{
     background-color:  #C6891E;
+    margin: 5px 0;
     margin-right: 3px;
     width: 15px;
     height: 15px;
@@ -421,9 +453,9 @@ hr{
     padding-left:10px;
 }
 .offers_card>p{
-    margin: 10px 0;
+    margin: 12px 0;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .review_card>p{
         display: none;
     }
@@ -564,8 +596,8 @@ hr{
 
 #footer-container .newsletter div button {
     width: 29%;
-    height: 45px;
-    padding-bottom: 4px;
+    height: 45.5px;
+    padding-bottom: 3px;
     border: none;
     border-radius: 0px 10px 10px 0px;
     margin-left: -10px;
