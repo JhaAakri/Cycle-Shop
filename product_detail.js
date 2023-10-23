@@ -1,11 +1,14 @@
+var id=localStorage.getitem("item-id")
+
+var baseurl="https://bicycle-shop-json-server.cyclic.app/bikes?id="
+var url=baseurl+id
 
 
-var url="https://bicycle-shop-json-server.cyclic.app/bikes?id=bic1"
 // buttons 
 // add to cart button
 let addtocart=document.getElementById("addtocartbtn")
 addtocart.addEventListener("click",()=>{
-    localStorage.setItem("id",id)
+    localStorage.setItem("id",)
     //set the product id to localstorage
 })
 //quick order button
@@ -15,8 +18,11 @@ quickorderbtn.addEventListener("click",()=>{
 })
 // console.log(cycle)
 
-getData(url);
 
+
+  
+//slider ends
+getData(url);
     async function getData(url){
         try {
             let res=await fetch(url);
