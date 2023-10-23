@@ -11,34 +11,171 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
+<style>
+    *{
+    font-family: sans-serif;
+}
+@media only screen and (max-width: 1000px) {
+    .logo-nav{
+        width: 80px;
+    }
+    .mq{
+        display: none;
+    }
+    .main-nav>div{
+        padding: 2px;
+    }
+  }
+
+  @media only screen and (max-width: 615px) {
+    .logo-nav{
+        width: 70px;
+    }
+    .mq2{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 510px) {
+    .logo-nav{
+        width: 60px;
+    }
+    .mq3{
+        display: none;
+    }
+  }
+.hrr{
+    margin: 0;
+}
+.mmain{
+    background-color: black;
+    height: auto;
+}
+.misc-img{
+    padding-top: 10px;
+    width: 35px;
+}
+.main-nav-2{
+    height: -100px;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: flex-end;
+}
+.main-nav-2>div{
+    padding: 5px 15px 5px 15px;
+}
+.main-nav-2>div>h5{
+    margin: 5px;
+    font-weight: 400;
+    letter-spacing: .6px;
+    font-size: 12.5px;
+}
+.logo-nav{
+    width: 100px;
+}
+.main-nav{
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+}
+.main-nav>div{
+    padding: 5px 15px;
+}
+.main-nav>div>h5{
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.logo-nav>img{
+    width: inherit;
+}
+#search-div{
+    background-color: black;
+    padding: 0 0 10px 30px;
+    margin: auto 30px auto 0;
+    height:30px;
+    width:300px;
+    position:relative;
+}
+
+#search-div>img {
+    background-color: black;
+    padding: 5px;
+    height:20px;
+    position:absolute;
+    right:0;
+    top:5px;
+}
+
+#search-div>img+input {
+    background-color: black;
+    padding-left: 15px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    height: 115%;
+    width:100%;
+}
+</style>
+
 <body>
     <!--nav-->
     
-    <div id="navbar-container">
-        <div class="navbar">
-            <div class="logo-menu navlogo" id="logo-menu">
-                <nav>
-                    <img src="/Images/home-logo.png" class="navlogo" alt="logo" />
-                    <ul>
-                        <li><a href='#'>Catalog</a></li>
-                        <li><a href='#'>Wishlist</a></li>
-                        <li><a href='#'>Cart</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="search-bar">
-                <div id="nav_search_userpro">
-                    <input id="search-input" type="search" placeholder="Search..." />
-                    <ul id="search-results"></ul>
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-
-            </div>
-            
+    
+<div class="mmain">
+    <div class="main-nav">
+        <div class="logo-nav">
+            <img src=" /header-images/logo.png" alt="">
+        </div>
+        <div class="mq">
+            <H5 id="mountain-btn">MOUNTAIN</H5>
+        </div>
+        <div class="mq">
+            <H5 id="road-btn">ROAD</H5>
+        </div>
+        <div class="mq">
+            <H5 id="active-btn">ACTIVE</H5>
+        </div>
+        <div class="mq">
+            <H5 id="electric-btn">ELECTRIC</H5>
+        </div>
+        <div class="mq">
+            <H5 id="kids-btn">KIDS</H5>
+        </div>
+        <div id="search-div">
+            <img src=" /header-images/search.png" alt="">
+            <input placeholder="Search" type="text">
+        </div>
+        <div class="mq2">
+            <H5>CONTACT</H5>
+        </div>
+        <div class="mq3">
+            <img class="misc-img" src=" /header-images/heart.png" alt="">
+        </div>
+        <div>
+            <img id="cart_btn_head" class="misc-img" src=" /header-images/cart.png" alt="">
+        </div>
+        <div>
+            <img  class="misc-img" src=" /header-images/user.png" alt="">
+        </div>
     </div>
+    <hr class="hrr">
+    <div class="main-nav-2">
+        <div>
+            <h5>About us</h5>
+        </div>
+        <div>
+            <h5>Delivery</h5>
+        </div>
+        <div>
+            <h5>Payment</h5>
+        </div>
+        <div>
+            <h5>Contact</h5>
+        </div>
+    </div>
+</div>
+
 
     <!-- Catalougr -->
 
