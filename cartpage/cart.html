@@ -24,14 +24,7 @@
     <script>
         const quantityMap = {}; 
         let totalAmount = 0;
-    
-        async function fetchData() {
-            // Fetch data from the JSON server
-            const response = await fetch('https://bicycle-shop-json-server.cyclic.app/bikes');
-            const data = await response.json();
-            return data;
-        }
-    
+        var cartdata=localStorage.getItem("product-cart-data")
         // Function to update the price and subtotal
         function updatePriceAndSubtotal(item, quantityInput, priceElement, subtotalElement) {
             // Calculate price and subtotal
@@ -131,6 +124,9 @@
     
                 // Checkout button
                 const checkoutButton = document.createElement('button');
+                checkoutButton.addEventListener("click",()=>{
+                    window.location.href="/addresspage/address.html"
+                })
                 checkoutButton.classList.add('checkout-button');
                 checkoutButton.textContent = 'Proceed to Checkout';
                 parent.append(checkoutButton);
