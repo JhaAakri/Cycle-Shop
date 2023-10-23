@@ -4,7 +4,110 @@
     font-family: 'Poppins', sans-serif;
 }
 /* slider css */
+*{
+    font-family: sans-serif;
+}
+@media only screen and (max-width: 1000px) {
+    .logo-nav{
+        width: 80px;
+    }
+    .mq{
+        display: none;
+    }
+    .main-nav>div{
+        padding: 2px;
+    }
+  }
 
+  @media only screen and (max-width: 615px) {
+    .logo-nav{
+        width: 70px;
+    }
+    .mq2{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 510px) {
+    .logo-nav{
+        width: 60px;
+    }
+    .mq3{
+        display: none;
+    }
+  }
+.hrr{
+    margin: 0;
+}
+.mmain{
+    background-color: black;
+    height: auto;
+}
+.misc-img{
+    padding-top: 10px;
+    width: 35px;
+}
+.main-nav-2{
+    height: -100px;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: flex-end;
+}
+.main-nav-2>div{
+    padding: 5px 15px 5px 15px;
+}
+.main-nav-2>div>h5{
+    margin: 5px;
+    font-weight: 400;
+    letter-spacing: .6px;
+    font-size: 12.5px;
+}
+.logo-nav{
+    width: 100px;
+}
+.main-nav{
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+}
+.main-nav>div{
+    padding: 5px 15px;
+}
+.main-nav>div>h5{
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.logo-nav>img{
+    width: inherit;
+}
+#search-div{
+    background-color: black;
+    padding: 0 0 10px 30px;
+    margin: auto 30px auto 0;
+    height:30px;
+    width:300px;
+    position:relative;
+}
+
+#search-div>img {
+    background-color: black;
+    padding: 5px;
+    height:20px;
+    position:absolute;
+    right:0;
+    top:5px;
+}
+
+#search-div>img+input {
+    background-color: black;
+    padding-left: 15px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    height: 115%;
+    width:100%;
+}
 .slider {
     text-align: center;
   }
