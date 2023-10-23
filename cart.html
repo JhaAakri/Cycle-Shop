@@ -4,233 +4,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background-color: #131921;
+            color: #fff;
+            padding: 15px;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        .cart-item {
+            display: flex;
+            border: 1px solid #e7e7e7;
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+    
+        .cart-item img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+        }
+    
+        .item-details {
+            flex: 1;
+        }
+    
+        .item-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    
+        .item-price {
+            color: #b12704;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+    
+        .quantity button {
+            background-color: #f3f3f3;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            font-size: 16px;
+        }
+    
+        .subtotal {
+            text-align: right;
+        }
+    
+        .subtotal p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    
+        .checkout-button {
+            background-color: #f0c14b;
+            color: #111;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    
+        .checkout-button:hover {
+            background-color: #d3ad35;
+        }
+         /* Responsive styles */
+    @media (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+
+        .cart-item {
+            flex-direction: column;
+        }
+
+        .cart-item img {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .item-details {
+            width: 100%;
+        }
+        .quantity button {
+            padding: 5px;
+        }
+
+        .quantity input {
+            width: 30px;
+        }
+
+        .checkout-button {
+            font-size: 16px;
+        }
+    }
+    </style>
+    
 </head>
 
-<style>
-
-    /* header style */
-    header {
-  color: var(--text-white);
-  background-color: var(--bg-black);
-}
-
-.nav-div {
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid white;
-  padding-block: 10px;
-}
-.nav-div ul {
-  display: flex;
-  gap: 20px;
-}
-.sub-header div {
-  display: flex;
-  justify-content: end;
-  gap: 30px;
-  padding-block: 10px;
-}
-.sub-header div ul {
-  display: flex;
-  gap: 20px;
-}
-/* header style end */
-
-
-
-    .container {
-        background-color: #464445;
-        padding: 0;
-        margin: 0;
-        padding-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        height: 100%;
-        width: 100%;
-    }
-    .newElement{
-        display: flex;
-        margin: 20px;
-        gap:10px;
-    }
-
-
-    .buttonplus{
-        height: 30px;
-
-    }
-
-    .buttonmin{
-        height: 30px;
-
-    }
-</style>
-
 <body>
-    <!-- header section -->
     <header>
-        <!-- nav  starts-->
-        <nav>
-          <div class="flex container nav-div">
-            <!-- logo starts -->
-            <div>
-              <h2>SPECIALZED</h2>
-            </div>
-            <!-- logo Ends -->
-            <!-- nav-links starts -->
-            <div>
-              <ul>
-                <li><a href="">Mountain</a></li>
-                <li><a href="">Road</a></li>
-                <li><a href="">Active</a></li>
-                <li><a href="">Electric</a></li>
-                <li><a href="">Kids</a></li>
-              </ul>
-            </div>
-            <!-- nav-links ends -->
-  
-            <!-- search bar starts -->
-            <div>
-              <input type="text" placeholder="earch" name="" id="" />
-            </div>
-            <!-- search bar ends -->
-  
-            <!-- mobile number starts -->
-            <div>
-              <p>+91 8984292</p>
-            </div>
-            <!-- mobile number ends -->
-  
-            <!-- extra nav links starts  -->
-            <div>
-              <ul>
-                <li><a href="">Like</a></li>
-                <li><a href="">Cart</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">Account</a></li>
-              </ul>
-            </div>
-            <!-- extra nav links ends  -->
-          </div>
-        </nav>
-        <!-- nav  ends-->
-  
-        <!-- sub -header starts-->
-        <div class="sub-header container">
-          <div>
-            <p>Your Location : krev</p>
-            <ul>
-              <li><a href="">About Us</a></li>
-              <li><a href="">Delivery</a></li>
-              <li><a href="">Payment</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
-          </div>
+        <div class="container">
+            <h1>Your Cart</h1>
         </div>
-        <!-- sub -header ends-->
-      </header>
+    </header>
 
-
-    <div class="container">
-        <div id="parent">
-           <h1 > ITEMS IN THE CART </h1>
-        </div>
+    <div class="container" id="parent">
+        <!-- Cart items will be added dynamically here using JavaScript -->
     </div>
 
     <script>
-        const data = [
-            {
-                "large_img": "https://m.media-amazon.com/images/I/41mXAbIYkCL._SX300_SY300_QL70_FMwebp_.jpg",
-                "title": "Urban Terrain UT1000 Steel MTB 27.5 Mountain Cycle",
-                "price": 11920,
-                "id": "bic1",
-            },
+         const quantityMap = {}; 
 
-            {
-                "large_img": "https://m.media-amazon.com/images/I/41mXAbIYkCL._SX300_SY300_QL70_FMwebp_.jpg",
-                "title": "Urban Terrain UT1000 Steel MTB 27.5 Mountain Cycle",
-                "price": 11920,
-                "id": "bic2",
-            }
-        ]
-        var parent = document.getElementById("parent")
-        // console.log(parent)
+async function fetchData() {
+    const response = await fetch('https://bicycle-shop-json-server.cyclic.app/bikes');
+    const data = await response.json();
+    return data;
+}
 
-        if (data.length == 0) {
-            parent.textContent = "Cart Empty";
-            var buttontxt = document.createElement('button');
-            buttontxt.textContent = "Keep Shopping";
+// Function to update the price and subtotal
+function updatePriceAndSubtotal(item, quantityElement, priceElement, subtotalElement) {
+    const price = item.price;
+    const quantity = quantityMap[item.id]; 
 
-            parent.append(buttontxt);
+    // Update the item's price
+    priceElement.textContent = '$' + (price * quantity).toFixed(2);
 
-        }
-        else {
-            const elements = data.map((i) => {
+    // Update the subtotal
+    subtotalElement.textContent = '$' + (price * quantity).toFixed(2);
+}
 
-                var pQty = document.createElement('p');
-                pQty.textContent = 1;
+async function renderCart() {
+    const data = await fetchData();
+    var parent = document.getElementById("parent");
 
-                var newElement = document.createElement('div');
-                newElement.setAttribute('class','newElement');
-                newElement.setAttribute('id', `${i.id}`);
+    if (data.length === 0) {
+        parent.textContent = "Cart Empty";
+        var buttontxt = document.createElement('button');
+        buttontxt.textContent = "Keep Shopping";
+        parent.append(buttontxt);
+    } else {
+        data.forEach((item) => {
+            var cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.id = item.id;
 
-                var newElementText= document.createElement('div');
+            var img = new Image();
+            img.src = item.large_img;
 
-                var pName = document.createElement('p');
-                pName.textContent = `${i.title}`
+            var itemDetails = document.createElement('div');
+            itemDetails.classList.add('item-details');
 
-                var buttonplus = document.createElement('button')
-                var buttonmin = document.createElement('button')
+            var itemTitle = document.createElement('p');
+            itemTitle.classList.add('item-title');
+            itemTitle.textContent = item.title;
 
-                buttonplus.setAttribute('class', 'buttonplus')
-                buttonmin.setAttribute('class', 'buttonplus')
+            var itemPrice = document.createElement('p');
+            itemPrice.classList.add('item-price');
+            itemPrice.textContent = '$' + item.price.toFixed(2);
 
-                buttonmin.textContent = '-'
+            var quantity = document.createElement('div');
+            quantity.classList.add('quantity');
 
-                var pimg = new Image()
-                pimg.src = `${i.large_img}`
+            var decreaseButton = document.createElement('button');
+            decreaseButton.textContent = '-';
+            var quantityInput = document.createElement('input');
+            quantityInput.type = 'text';
+            quantityInput.value = '1';
+            var increaseButton = document.createElement('button');
+            increaseButton.textContent = '+';
 
-                var pPrice = document.createElement('p');
-                pPrice.textContent = `${i.price}`
+            quantity.append(decreaseButton, quantityInput, increaseButton);
 
-                var pQty = document.createElement('p');
-                pQty.textContent = 1
+            var subtotal = document.createElement('div');
+            subtotal.classList.add('subtotal');
 
-                buttonplus.textContent = '+'
-                buttonplus.addEventListener('click', () => {
-                    pQty.textContent = parseInt(pQty.textContent) + 1
-                    pPrice.textContent = parseInt(pQty.textContent) * `${i.price}`
-                })
+            var subtotalPrice = document.createElement('p');
+            subtotalPrice.textContent = '$' + item.price.toFixed(2);
 
-                buttonmin.addEventListener('click', () => {
-                    pQty.textContent = parseInt(pQty.textContent) < 2 ? parseInt(pQty.textContent) : parseInt(pQty.textContent) - 1
-                    pPrice.textContent = parseInt(pQty.textContent) * `${i.price}`
-                })
-                newElementText.append(pName, pPrice, buttonmin, pQty, buttonplus)
+            subtotal.append(subtotalPrice);
 
-                newElement.append(pimg,newElementText )
+            itemDetails.append(itemTitle, itemPrice, quantity);
+            cartItem.append(img, itemDetails, subtotal);
+            parent.append(cartItem);
 
-                return (
-                    newElement
-                )
-            })
+            // Attach click event handlers to +/- buttons
+            decreaseButton.addEventListener('click', () => {
+                let quantity = quantityMap[item.id];
+                if (quantity > 1) {
+                    quantity -= 1;
+                    quantityMap[item.id] = quantity;
+                    quantityInput.value = quantity;
+                    updatePriceAndSubtotal(item, quantityInput, itemPrice, subtotalPrice);
+                }
+            });
 
-            var checkoutDiv= document.createElement("div")
+            increaseButton.addEventListener('click', () => {
+                let quantity = quantityMap[item.id];
+                quantity += 1;
+                quantityMap[item.id] = quantity;
+                quantityInput.value = quantity;
+                updatePriceAndSubtotal(item, quantityInput, itemPrice, subtotalPrice);
+            });
 
-            var checkout= document.createElement("button")
+            // Initialize quantity with a default quantity of 1 for each item
+            quantityMap[item.id] = 1;
 
-            checkoutDiv.append(checkout);
+            // Initial price and subtotal calculation
+            updatePriceAndSubtotal(item, quantityInput, itemPrice, subtotalPrice);
+        });
 
-            checkout.textContent="Checkout";
-            // console.log(elements)
-            elements.forEach((e) => {
-                parent.append(e)
-            })
+        // Checkout button
+        var checkoutButton = document.createElement('button');
+        checkoutButton.classList.add('checkout-button');
+        checkoutButton.textContent = 'Proceed to Checkout';
+        parent.append(checkoutButton);
+    }
+}
 
-            perent.append(checkoutDiv)
-        }
+renderCart();
     </script>
 </body>
+
 </html>

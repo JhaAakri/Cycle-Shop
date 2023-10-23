@@ -1,21 +1,145 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <title>Your Cart</title>
+    
 </head>
 
-<link rel="stylesheet" href="cart.css">  
-
 <body>
-    <div class="container" id="container">
-        <div id="parent">
-           <h1 > ITEMS IN THE CART </h1>
+    <header>
+        <div class="container">
+            <h1>Your Cart</h1>
         </div>
-        
-    </div>    
+    </header>
+
+    <div class="container" id="parent">
+        <!-- Cart items will be added dynamically here using JavaScript -->
+    </div>
+
+    <script>
+        const quantityMap = {}; 
+        let totalAmount = 0;
+    
+        async function fetchData() {
+            // Fetch data from the JSON server
+            const response = await fetch('https://bicycle-shop-json-server.cyclic.app/bikes');
+            const data = await response.json();
+            return data;
+        }
+    
+        // Function to update the price and subtotal
+        function updatePriceAndSubtotal(item, quantityInput, priceElement, subtotalElement) {
+            // Calculate price and subtotal
+            const price = item.price;
+            const quantity = quantityMap[item.id];
+    
+            priceElement.textContent = '$' + (price * quantity).toFixed(2);
+    
+            const subtotal = price * quantity;
+            subtotalElement.textContent = '$' + subtotal.toFixed(2);
+    
+            // Calculate and update total
+            totalAmount = Object.values(quantityMap).reduce((total, quantity) => {
+                return total + (item.price * quantity);
+            }, 0);
+    
+            document.getElementById('total-amount').textContent = '$' + totalAmount.toFixed(2);
+        }
+    
+        async function renderCart() {
+            const data = await fetchData();
+            const parent = document.getElementById("parent");
+    
+            if (data.length === 0) {
+                parent.textContent = "Cart Empty";
+                const buttontxt = document.createElement('button');
+                buttontxt.textContent = "Keep Shopping";
+                parent.append(buttontxt);
+            } else {
+                data.forEach((item) => {
+                    // Create cart item
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.id = item.id;
+    
+                    const img = new Image();
+                    img.src = item.large_img;
+    
+                    const itemDetails = document.createElement('div');
+                    itemDetails.classList.add('item-details');
+    
+                    const itemTitle = document.createElement('p');
+                    itemTitle.classList.add('item-title');
+                    itemTitle.textContent = item.title;
+    
+                    const itemPrice = document.createElement('p');
+                    itemPrice.classList.add('item-price');
+                    itemPrice.textContent = '$' + item.price.toFixed(2);
+    
+                    const quantity = document.createElement('div');
+                    quantity.classList.add('quantity');
+    
+                    const decreaseButton = document.createElement('button');
+                    decreaseButton.textContent = '-';
+                    const quantityInput = document.createElement('input');
+                    quantityInput.type = 'text';
+                    quantityInput.value = '1';
+                    const increaseButton = document.createElement('button');
+                    increaseButton.textContent = '+';
+    
+                    quantity.append(decreaseButton, quantityInput, increaseButton);
+    
+                    const subtotal = document.createElement('div');
+                    subtotal.classList.add('subtotal');
+    
+                    const subtotalPrice = document.createElement('p');
+                    subtotalPrice.textContent = '$' + item.price.toFixed(2);
+    
+                    subtotal.append(subtotalPrice);
+    
+                    itemDetails.append(itemTitle, itemPrice, quantity);
+                    cartItem.append(img, itemDetails, subtotal);
+                    parent.append(cartItem);
+    
+                    // Attach click event handlers to +/- buttons
+                    decreaseButton.addEventListener('click', () => {
+                        if (quantityInput.value > 1) {
+                            quantityInput.value = parseInt(quantityInput.value) - 1;
+                            quantityMap[item.id] -= 1;
+                            updatePriceAndSubtotal(item, quantityInput, itemPrice, subtotalPrice);
+                        }
+                    });
+    
+                    increaseButton.addEventListener('click', () => {
+                        quantityInput.value = parseInt(quantityInput.value) + 1;
+                        if (!quantityMap[item.id]) {
+                            quantityMap[item.id] = 1;
+                        } else {
+                            quantityMap[item.id] += 1;
+                        }
+                        updatePriceAndSubtotal(item, quantityInput, itemPrice, subtotalPrice);
+                    });
+    
+                    // Store initial quantity in the map
+                    quantityMap[item.id] = 1;
+                });
+    
+                // Checkout button
+                const checkoutButton = document.createElement('button');
+                checkoutButton.classList.add('checkout-button');
+                checkoutButton.textContent = 'Proceed to Checkout';
+                parent.append(checkoutButton);
+            }
+        }
+    
+        renderCart();
+    </script>
+    
 </body>
-<script src="cart.js"></script>
+
 </html>
