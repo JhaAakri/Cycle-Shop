@@ -52,7 +52,7 @@ function displayData(data) {
 
         let button = document.createElement("button");
         button.setAttribute("class", "addItem");
-        button.innerHTML = "🤍";
+        button.innerHTML = "🛒";
         button.addEventListener("click", () => toggleWishList(item, button));
 
         container.appendChild(image);
@@ -157,11 +157,11 @@ function toggleWishList(item, button) {
     if (index !== -1) {
         // Remove from wishlist
         wishList.splice(index, 1);
-        button.innerHTML = "🤍";
+        button.innerHTML = "🛒";
     } else {
         // Add to wishlist
         wishList.push(item);
-        button.innerHTML = "❤️";
+        button.innerHTML = "🛒";
     }
 
     localStorage.setItem('wishlist', JSON.stringify(wishList));

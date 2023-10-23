@@ -1,197 +1,17 @@
+/* Reset default styles */
 * {
-font-family: 'Raleway', sans-serif;
-}
-/*
-body {
     margin: 0;
     padding: 0;
-    background-color: #484448;
+    box-sizing: border-box;
 }
 
-#main {
-    width: 90%;
-    margin: auto;
-    background-color: #484448;
-}
-
-#main>div:first-child {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#main>div:first-child select {
-    border: none;
-    background-color: #484448;
-    color: aliceblue;
-    margin: 0px 10px;
-}
-
-#main>div:first-child option {
-    background-color: transparent;
-    border-radius: 5px;
-}
-
-#maindiv {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
-    align-items: baseline;
-    background-color: #484448;
-}
-
-#filterdiv {
-    width: 20%;
-    font-size: 20px;
-    color: white;
-    padding-top: 0;
-}
-
-#filterdiv>div {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.329);
-    padding: 20px 0px;
-    z-index: -10;
-    background-color: #484448;
-}
-
-#filterdiv select {
-    background-color: #484448;
-    color: white;
-    border: none;
-}
-
-#filterdiv select:hover {
-    cursor: pointer;
-}
-
-#filterdiv select::after:hover {
-    cursor: pointer;
-}
-
-#products-container {
-    #products-container {
-        width: 100%;
-        margin: auto;
-        margin-bottom: 2%;
-    }
-}
-
-#products {
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5%;
-    margin-bottom: 30%;
-}
-
-#products>div:hover {
-    transform: scale(0.97);
-}
-
-#products>div {
-    background-color: white;
-    border-radius: 5px;
-    height: 50vh;
-    padding: 10px 15px;
-    box-shadow: 0px 7px 30px 4px #422f0b, 0px 2px 16px 0px #422f0b;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.imgDiv {
-    width: 100%;
-    height: 60%;
-    position: relative;
-}
-
-.imgDiv img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 5px;
-}
-
-.titlePrice {
-    width: 100%;
-    height: 30%;
-    margin: auto;
-    position: relative;
-}
-
-.addItem {
-    border: 2px solid grey;
-    border-radius: 5px;
-    font-size: 12px;
-    background-color: transparent;
-    padding: 6px;
-    margin-right: 15px;
-    color: #484448;
-    transition: background-color 0.3s ease;
-}
-
-.addItem:hover {
-    background-color: #eb001b;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-#sorting {
-    display: flex;
-    color: aliceblue;
-    margin-bottom: 5px;
-    justify-content: flex-end;
-    margin-bottom: 5%;
-}
-
-#select {
-    background-color: transparent;
-    color: aliceblue;
-    border: none;
-}
-
-#select option {
-    background-color: transparent;
-}
-
-#select:focus {
-    outline: none;
-    background-color: transparent;
-}
-*/
-#pagination1 {
-    text-align: center;
-    margin-left: 200px;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    gap: 2%;
-}
-
-.pagination-button {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #484448;
-    border-radius: 5px;
-    color: white;
-}
-
-.pagination-button:hover {
-    cursor: pointer;
-    background-color: #b33535;
-} 
-
-
-/* Body styles */
+/* Typography and global styles */
 body {
+    font-family: 'Raleway', sans-serif;
     background-color: #484448;
     color: white;
     margin: 0;
+    padding: 0;
 }
 
 /* Header styles */
@@ -217,29 +37,100 @@ header .header-icons a {
     font-size: 24px;
     text-decoration: none;
 }
+/* Responsive styles for the navigation bar */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+    }
 
-/* Main styles */
+    header .logo img {
+        width: 80px; 
+    }
+
+    header .header-icons {
+        margin-top: 10px;
+    }
+
+    header .header-icons a {
+        font-size: 20px; 
+    }
+}
+
+/* Pagination styles */
+#pagination1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.pagination-button {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #484448;
+    border-radius: 5px;
+    color: white;
+}
+
+.pagination-button:hover {
+    cursor: pointer;
+    background-color: #b33535;
+}
+/* Responsive styles for pagination */
+@media (max-width: 768px) {
+    #pagination1 {
+        flex-direction: column; 
+    }
+    .pagination-button {
+        margin-top: 10px; 
+    }
+}
+
+/* Main content styles */
 #main {
     width: 90%;
     margin: auto;
 }
 
+/* Sorting styles */
 #sorting {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 950px;
+    margin-left: 900px;
 }
 
 #sorting select {
     background-color: #484448;
+    margin-right: 20px;
     color: white;
     border: none;
     padding: 5px;
     font-size: 16px;
 }
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #sorting {
+        flex-direction: column; 
+        align-items: flex-start; 
+        margin: 0; 
+    }
 
+    #sorting select {
+        width: 100%; 
+        margin-right: 0; 
+        margin-top: 10px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #sorting select {
+        font-size: 14px; 
+    }
+}
+
+/* Filter styles */
 #maindiv {
     display: flex;
     justify-content: space-between;
@@ -249,15 +140,33 @@ header .header-icons a {
     width: 20%;
     font-size: 20px;
     color: white;
-    padding: 20px 0;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+#filterdiv h1 {
+    margin-top: -100px;
+    margin-bottom: 50px; 
+}
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #filterdiv h1 {
+        margin-bottom: 10px; 
+        font-size: 30px;
+        display: none;
+    }
 }
 
-/*  FILTERS header style */
+@media screen and (max-width: 480px) {
+    #filterdiv h1 {
+        margin-bottom: 5px;
+    }
+}
+
 .filter-header {
     display: flex;
     align-items: center;
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 
 .filter-header i {
@@ -265,7 +174,6 @@ header .header-icons a {
     font-size: 24px;
 }
 
-/* Filter option styles */
 .filter-option {
     margin-bottom: 20px;
 }
@@ -280,53 +188,20 @@ header .header-icons a {
     background-color: #484448;
     color: white;
     border: 1px solid #747474;
-    padding: 5px;
+    padding: 8px;
     width: 100%;
     font-size: 14px;
 }
 
-
-#products {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-/* Product card styles */
-.product-card {
-    background-color: white;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0px 7px 30px 4px #422f0b, 0px 2px 16px 0px #422f0b;
-    width: calc(33.33% - 20px);
-}
-
-.product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.product-card h2 {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.product-card p {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
+/* Product grid styles */
 #products {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .item {
-    width: calc(33.33% - 80px); 
+    width: calc(33.33% - 20px);
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -334,23 +209,43 @@ header .header-icons a {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5); 
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
 }
 
 .item img {
-    width: 100%; 
-    height: auto; 
-    max-height: 100%; 
+    width: 100%;
+    height: auto;
+    max-height: 100%;
     object-fit: cover;
 }
 
 .titlePrice {
     text-align: center;
-    color: black; 
+    color: black;
     margin-top: 10px;
 }
 
 .titlePrice h3 {
     margin-bottom: 5px;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #maindiv {
+        flex-direction: column;
+    }
+    #filterdiv {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+    /* #sorting {
+        margin-left: 0;
+        margin-bottom: 20px;
+    } */
+    .item {
+        width: 100%;
+    }
+}
+
 
