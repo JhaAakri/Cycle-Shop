@@ -253,6 +253,41 @@ setupSortingListeners();
 
 
 
+// // Get references to the search input and search results container
+// const searchInput = document.getElementById('search-input');
+// const searchResults = document.getElementById('search-results');
+
+// // Listen for input events on the search input field
+// searchInput.addEventListener('input', () => {
+//     const searchValue = searchInput.value.toLowerCase();
+
+//     // Filter products based on the search value
+//     const filteredProducts = filterProductsByName(searchValue);
+
+//     // Display the filtered results
+//     displaySearchResults(filteredProducts);
+// });
+
+// // Function to filter products by name
+// function filterProductsByName(searchValue) {
+//     return filterData.filter(item => item.title.toLowerCase().includes(searchValue));
+// }
+
+// // Function to display search results
+// function displaySearchResults(results) {
+//     searchResults.innerHTML = '';
+
+//     results.forEach(item => {
+//         const resultItem = document.createElement('li');
+//         resultItem.textContent = item.title;
+//         resultItem.addEventListener('click', () => {
+//             // Redirect to the product page with the selected product's ID
+//             window.location.href = `product.html?id=${item.id}`;
+//         });
+
+//         searchResults.appendChild(resultItem);
+//     });
+// }
 
 
 
